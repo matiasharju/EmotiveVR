@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}" SchemaVersion="85">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Valence" ID="{30F20821-4533-4824-9204-CD28D234F3F0}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Negative3" ID="{5A893E9C-E601-419A-9EA0-3ECB42A0C7F0}"/>
+						<Switch Name="Negative2" ID="{7B8148F7-9F86-4EFE-94D8-328557B84FCB}"/>
+						<Switch Name="Negative1" ID="{CEC956F8-0F39-413C-99CE-0DE148EB238E}"/>
+						<Switch Name="Neutral" ID="{86829211-944F-43AF-B222-EE694E5A52F8}"/>
+						<Switch Name="Positive1" ID="{9ADE10CB-BFC2-4589-AED9-FF0FB0DE6064}"/>
+						<Switch Name="Positive2" ID="{E72CF725-5E14-4A1C-BEB1-895CE5BE678D}"/>
+						<Switch Name="Positive3" ID="{A5C726AC-AEDB-4F04-89D7-76AACF9FEB43}"/>
+					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="ValenceLevel" ID="{EEA5220B-08C9-460F-ADFF-810AFF75B7C9}"/>
+						<Curve Name="" ID="{52CAC384-4807-4B88-9B8B-75A40190F423}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>1</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>14.189188976378</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>27.8716141732283</XPos>
+									<YPos>3</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>41.722968503937</XPos>
+									<YPos>4</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>55.5743307086614</XPos>
+									<YPos>5</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>70.7770236220472</XPos>
+									<YPos>6</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>86.1486456692913</XPos>
+									<YPos>7</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>100</XPos>
+									<YPos>0</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
+				</SwitchGroup>
+				<SwitchGroup Name="Intensity" ID="{EB980085-A059-4C3E-8C15-6DD952591076}">
+					<ChildrenList>
+						<Switch Name="Slow" ID="{3ACDC2D6-747F-45F2-A550-5768BDA5C1D5}"/>
+						<Switch Name="Mid" ID="{A40534C7-4D69-4C05-9290-F6CFB09DB954}"/>
+						<Switch Name="Fast" ID="{73E37C40-4B83-4EB0-A133-7551578612D1}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

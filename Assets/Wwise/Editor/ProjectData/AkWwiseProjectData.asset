@@ -1,0 +1,227 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e95eaef8908f4720896d2c14d14d50a, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  CurrentPluginConfig: 
+  EventWwu:
+  - PhysicalPath: Events/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{73D3D798-723D-4452-BAD3-99FF9084AF40}'
+    m_lastTimePsrt1: -1931643520
+    m_lastTimePart2: -1999275529
+    List:
+    - Name: InteractiveMusic
+      Path: Default Work Unit/InteractiveMusic
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: InteractiveMusic
+        ObjectType: 3
+      ID: -2015688048
+      Guid: 883720b209db58488d6e9a41ecfcc6f4
+      minDuration: 0
+      maxDuration: 0
+      maxAttenuation: 0
+    - Name: VideoAudio
+      Path: Default Work Unit/VideoAudio
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: VideoAudio
+        ObjectType: 3
+      ID: 1707179908
+      Guid: a903f491f9234a4ba2619e283d56fba0
+      minDuration: 0
+      maxDuration: 0
+      maxAttenuation: 0
+  AuxBusWwu:
+  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{915B61B1-18DF-4962-AED9-7E215C7469A8}'
+    m_lastTimePsrt1: 988421888
+    m_lastTimePart2: -1999275526
+    List: []
+  StateWwu:
+  - PhysicalPath: States/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{2C5AE38C-5602-4727-A6AF-C6E8C1AB0135}'
+    m_lastTimePsrt1: 1906913792
+    m_lastTimePart2: -1999275725
+    List:
+    - Name: Sequence
+      Path: Default Work Unit/Sequence
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Sequence
+        ObjectType: 9
+      ID: 311444866
+      Guid: a57a347164e66d4e8b60b43cce462f1e
+      values:
+      - Hypnosis
+      - None
+      - Selection
+      ValueIcons:
+      - ElementName: Hypnosis
+        ObjectType: 8
+      - ElementName: None
+        ObjectType: 8
+      - ElementName: Selection
+        ObjectType: 8
+      valueIDs: 705807bfdb3ba32c4984a675
+      ValueGuids:
+      - bytes: 27e446e5373fa141904ef90e22419519
+      - bytes: 7c699716d21d7049930a503ab553f8dd
+      - bytes: 43226cac338dbf468b1274b1db85836f
+  SwitchWwu:
+  - PhysicalPath: Switches/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}'
+    m_lastTimePsrt1: 1906913792
+    m_lastTimePart2: -1999275725
+    List:
+    - Name: Intensity
+      Path: Default Work Unit/Intensity
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Intensity
+        ObjectType: 11
+      ID: -1824638732
+      Guid: 850098eb59a03e4c8c156dd952591076
+      values:
+      - Fast
+      - Mid
+      - Slow
+      ValueIcons:
+      - ElementName: Fast
+        ObjectType: 10
+      - ElementName: Mid
+        ObjectType: 10
+      - ElementName: Slow
+        ObjectType: 10
+      valueIDs: 531cc0b0a91e7e4602e4f12e
+      ValueGuids:
+      - bytes: 407ce373834bb04ea1337551578612d1
+      - bytes: c73405a4694d054c9290f6cfb09db954
+      - bytes: d6c2cd3a7f74f245a5505768bda5c1d5
+    - Name: Valence
+      Path: Default Work Unit/Valence
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Valence
+        ObjectType: 11
+      ID: -355532169
+      Guid: 2108f230334524489204cd28d234f3f0
+      values:
+      - Negative1
+      - Negative2
+      - Negative3
+      - Neutral
+      - Positive1
+      - Positive2
+      - Positive3
+      ValueIcons:
+      - ElementName: Negative1
+        ObjectType: 10
+      - ElementName: Negative2
+        ObjectType: 10
+      - ElementName: Negative3
+        ObjectType: 10
+      - ElementName: Neutral
+        ObjectType: 10
+      - ElementName: Positive1
+        ObjectType: 10
+      - ElementName: Positive2
+        ObjectType: 10
+      - ElementName: Positive3
+        ObjectType: 10
+      valueIDs: c9ce5e14cace5e14cbce5e146ab6f827b1206c6db2206c6db3206c6d
+      ValueGuids:
+      - bytes: f856c9ce390f3c4199ce0de148eb238e
+      - bytes: f748817b869ffe4e94d8328557b84fcb
+      - bytes: 9c3e895a01e69a419ea03ecb42a0c7f0
+      - bytes: 119282864f94af43b222ee694e5a52f8
+      - bytes: cb10de9ac2bf8945aed9ff0fb0de6064
+      - bytes: 25f72ce7145e1c4abeb1895ce5be678d
+      - bytes: ac26c7a5dbae044f89d776aacf9feb43
+  BankWwu:
+  - PhysicalPath: SoundBanks/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{710C76F7-D208-445D-9C01-E6BC5E2B47FD}'
+    m_lastTimePsrt1: -1847857280
+    m_lastTimePart2: -1999275719
+    List:
+    - Name: DefaultSoundBank
+      Path: Default Work Unit/DefaultSoundBank
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: DefaultSoundBank
+        ObjectType: 7
+      ID: 1675065207
+      Guid: 85a69e70f6e2a346885f9b5815faccdf
+  RtpcWwu:
+  - PhysicalPath: Game Parameters/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{66F9F794-BB22-49DF-915F-348F8312E0FE}'
+    m_lastTimePsrt1: 1906913792
+    m_lastTimePart2: -1999275725
+    List:
+    - Name: CrazyLevel
+      Path: Default Work Unit/CrazyLevel
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: CrazyLevel
+        ObjectType: 13
+      ID: 582204082
+      Guid: ce84f9dc2cc7054f860fd855a0b799b4
+    - Name: ValenceLevel
+      Path: Default Work Unit/ValenceLevel
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: ValenceLevel
+        ObjectType: 13
+      ID: -2019472769
+      Guid: 0b22a5eec9080f46adff810aff75b7c9
+  TriggerWwu:
+  - PhysicalPath: Triggers/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{B80B57A5-FCC5-428A-9884-70E2E3670DEF}'
+    m_lastTimePsrt1: 1906913792
+    m_lastTimePart2: -1999275725
+    List: []
+  AcousticTextureWwu:
+  - PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
+    ParentPhysicalPath: 
+    Guid: '{9AA5519A-B1C6-434B-93F4-455A922C8668}'
+    m_lastTimePsrt1: 1906913792
+    m_lastTimePart2: -1999275725
+    List: []
+  ExpandedItems:
+  - /EmotiveVR_WWise
+  - /EmotiveVR_WWise/Events
+  - /EmotiveVR_WWise/Events/Default Work Unit
+  m_lastPopulateTimePsrt1: 0
+  m_lastPopulateTimePart2: 0
+  autoPopulateEnabled: 1
+  basePath: Audio/GeneratedSoundBanks
+  language: English(US)
+  defaultPoolSize: 4096
+  lowerPoolSize: 2048
+  streamingPoolSize: 1024
+  preparePoolSize: 0
+  memoryCutoffThreshold: 0.95
+  callbackManagerBufferSize: 4

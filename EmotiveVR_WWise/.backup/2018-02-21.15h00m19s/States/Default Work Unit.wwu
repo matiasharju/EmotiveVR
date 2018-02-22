@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{2C5AE38C-5602-4727-A6AF-C6E8C1AB0135}" SchemaVersion="80">
+	<States>
+		<WorkUnit Name="Default Work Unit" ID="{2C5AE38C-5602-4727-A6AF-C6E8C1AB0135}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="Sequence" ID="{71347AA5-E664-4E6D-8B60-B43CCE462F1E}">
+					<ChildrenList>
+						<State Name="None" ID="{1697697C-1DD2-4970-930A-503AB553F8DD}"/>
+						<State Name="Selection" ID="{AC6C2243-8D33-46BF-8B12-74B1DB85836F}"/>
+						<State Name="Hypnosis" ID="{E546E427-3F37-41A1-904E-F90E22419519}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

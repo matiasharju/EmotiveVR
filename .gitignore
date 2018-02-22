@@ -1,3 +1,10 @@
+# Video files
+/Assets/360VideoStuff/*.mp4
+
+# Wwise
+/EmotiveVR_WWise/.cache/
+/EmotiveVR_Wwise/Originals/
+
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/

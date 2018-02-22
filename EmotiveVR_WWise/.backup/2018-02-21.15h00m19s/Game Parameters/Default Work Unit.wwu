@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{66F9F794-BB22-49DF-915F-348F8312E0FE}" SchemaVersion="80">
+	<GameParameters>
+		<WorkUnit Name="Default Work Unit" ID="{66F9F794-BB22-49DF-915F-348F8312E0FE}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="ValenceLevel" ID="{EEA5220B-08C9-460F-ADFF-810AFF75B7C9}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="CrazyLevel" ID="{DCF984CE-C72C-4F05-860F-D855A0B799B4}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

@@ -1,0 +1,63 @@
+Switch Group	ID	Name			Wwise Object Path	Notes
+	1445037870	MusicSwitch			\Default Work Unit\MusicSwitch	
+	3879602218	PulinaSwitch			\Default Work Unit\PulinaSwitch	
+	4126811978	MovementSwitch			\Default Work Unit\MovementSwitch	
+	4200293452	MemorySwitch			\Default Work Unit\MemorySwitch	
+
+Switch	ID	Name	Switch Group			Notes
+	867555629	Pioneer	MusicSwitch			
+	1860344317	Poet	MusicSwitch			
+	1862135557	NoMusic	MusicSwitch			
+	3452859940	Skeptic	MusicSwitch			
+	4036634340	Machine	MusicSwitch			
+	1160234136	Normal	PulinaSwitch			
+	3252055990	Overlapping	PulinaSwitch			
+	797712787	Pyramid	MovementSwitch			
+	4036634340	Machine	MovementSwitch			
+	1049265976	Machine35	MemorySwitch			
+	1049265977	Machine34	MemorySwitch			
+	1049265980	Machine31	MemorySwitch			
+	1049265982	Machine33	MemorySwitch			
+	1049265983	Machine32	MemorySwitch			
+	1299159882	Pioneer25	MemorySwitch			
+	1299159883	Pioneer24	MemorySwitch			
+	1299159884	Pioneer23	MemorySwitch			
+	1299159885	Pioneer22	MemorySwitch			
+	1299159886	Pioneer21	MemorySwitch			
+	1766720752	Poet12	MemorySwitch			
+	1766720753	Poet13	MemorySwitch			
+	1766720754	Poet10	MemorySwitch			
+	1766720755	Poet11	MemorySwitch			
+	1766720758	Poet14	MemorySwitch			
+	1766720759	Poet15	MemorySwitch			
+	2476120357	Epilogue	MemorySwitch			
+	4265835897	Skeptic41	MemorySwitch			
+	4265835898	Skeptic42	MemorySwitch			
+	4265835899	Skeptic43	MemorySwitch			
+	4265835900	Skeptic44	MemorySwitch			
+	4265835901	Skeptic45	MemorySwitch			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	2579036723	MemoryNumber			\Default Work Unit\MemoryNumber	
+
+State	ID	Name	State Group			Notes
+	748895195	None	MemoryNumber			
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	273199154	Ambisonic Bus			\Default Work Unit\Master Audio Bus\Ambisonic Bus	
+	457374884	Memories			\Default Work Unit\Master Audio Bus\Stereo Bus\Memories	
+	805203703	Master Secondary Bus			\Default Work Unit\Master Secondary Bus	
+	1069431850	Player			\Default Work Unit\Master Audio Bus\Ambisonic Bus\Player	
+	1160275207	Stereo Bus			\Default Work Unit\Master Audio Bus\Stereo Bus	
+	1229948536	Environment			\Default Work Unit\Master Audio Bus\Ambisonic Bus\Environment	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Stereo Bus\Music	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	1575916026	MusicReverb			\Default Work Unit\Master Audio Bus\Stereo Bus\MusicReverb	
+	1745374996	EnvironmentReverb			\Default Work Unit\Master Audio Bus\Ambisonic Bus\EnvironmentReverb	
+
+Effect plug-ins	ID	Name	Type				Notes
+	632661627	Resonance Audio Renderer (Custom)	Resonance Audio Renderer			
+	3164629247	Holy	Wwise RoomVerb			
+

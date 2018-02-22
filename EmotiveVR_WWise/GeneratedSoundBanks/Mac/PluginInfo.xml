@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PluginInfo Project="EmotiveVR_WWise" Platform="Mac" BasePlatform="Mac">
+	<Plugins>
+		<Plugin Name="Resonance Audio Renderer" ID="6557955" DLL="ResonanceAudioFX"/>
+		<Plugin Name="Wwise Parametric EQ" ID="6881283" DLL="AkParametricEQ"/>
+		<Plugin Name="Wwise Flanger" ID="8192003" DLL="AkFlanger"/>
+		<Plugin Name="Wwise Stereo Delay" ID="8847363" DLL="AkStereoDelay"/>
+		<Plugin Name="Wwise Harmonizer" ID="9043971" DLL="AkHarmonizer"/>
+		<Plugin Name="System" ID="11403271" DLL="DefaultSink"/>
+		<Plugin Name="No Output" ID="11862023" DLL="DefaultSink"/>
+	</Plugins>
+</PluginInfo>

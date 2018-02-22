@@ -1,0 +1,177 @@
+Event	ID	Name			Wwise Object Path	Notes
+	382188909	Synth2			\Default Work Unit\Synths\Synth2	
+	382188910	Synth1			\Default Work Unit\Synths\Synth1	
+	1637134674	MemoryEmitter			\Default Work Unit\Memories\MemoryEmitter	
+	2129636626	Movement			\Default Work Unit\Movements\Movement	
+	3509424520	Memory			\Default Work Unit\Memories\Memory	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	3879602218	PulinaSwitch			\Default Work Unit\PulinaSwitch	
+	4126811978	MovementSwitch			\Default Work Unit\MovementSwitch	
+	4200293452	MemorySwitch			\Default Work Unit\MemorySwitch	
+
+Switch	ID	Name	Switch Group			Notes
+	1160234136	Normal	PulinaSwitch			
+	3252055990	Overlapping	PulinaSwitch			
+	797712787	Pyramid	MovementSwitch			
+	4036634340	Machine	MovementSwitch			
+	1049265976	Machine35	MemorySwitch			
+	1049265977	Machine34	MemorySwitch			
+	1049265980	Machine31	MemorySwitch			
+	1049265982	Machine33	MemorySwitch			
+	1049265983	Machine32	MemorySwitch			
+	1299159882	Pioneer25	MemorySwitch			
+	1299159883	Pioneer24	MemorySwitch			
+	1299159884	Pioneer23	MemorySwitch			
+	1299159885	Pioneer22	MemorySwitch			
+	1299159886	Pioneer21	MemorySwitch			
+	1766720752	Poet12	MemorySwitch			
+	1766720753	Poet13	MemorySwitch			
+	1766720754	Poet10	MemorySwitch			
+	1766720755	Poet11	MemorySwitch			
+	1766720758	Poet14	MemorySwitch			
+	1766720759	Poet15	MemorySwitch			
+	2476120357	Epilogue	MemorySwitch			
+	4265835897	Skeptic41	MemorySwitch			
+	4265835898	Skeptic42	MemorySwitch			
+	4265835899	Skeptic43	MemorySwitch			
+	4265835900	Skeptic44	MemorySwitch			
+	4265835901	Skeptic45	MemorySwitch			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1243167459	MelodyVolume			\Default Work Unit\MusicParameters\MelodyVolume	
+	2007424710	Osc2Transp			\Default Work Unit\Osc2Transp	
+	2301001150	DrumsVolume			\Default Work Unit\MusicParameters\DrumsVolume	
+	2579036723	MemoryNumber			\Default Work Unit\MemoryNumber	
+	2920859788	Osc2PWM			\Default Work Unit\Osc2PWM	
+	3536527708	BaseFreq			\Default Work Unit\BaseFreq	
+	3864589917	Osc1PWM			\Default Work Unit\Osc1PWM	
+	4115204457	Osc1Transp			\Default Work Unit\Osc1Transp	
+
+Effect plug-ins	ID	Name	Type				Notes
+	616348276	Wwise Stereo Delay (Custom)	Wwise Stereo Delay			
+	1005748106	Wwise Stereo Delay (Custom)	Wwise Stereo Delay			
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	300590700	RING 02	Wwise Synth One		\Actor-Mixer Hierarchy\Factory Synth One\RingSynth1\RING 02	Audiokinetic Inc. All rights reserved. Content provided by Vincent Gagnon © 2014 Vincent Gagnon
+	312136383	RING 02	Wwise Synth One		\Actor-Mixer Hierarchy\Factory Synth One\RingSynth2\RING 02	Audiokinetic Inc. All rights reserved. Content provided by Vincent Gagnon © 2014 Vincent Gagnon
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	3559655	Poet04	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Poet04_515932F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\MemorySwitch\Poet04		331294
+	12584694	SynthF	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\SynthF4_81B2982A.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Groove\F\SynthF		452312
+	13586374	pulinaMachine2	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaMachine2_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Machine\pulinaMachine2		15992
+	36306484	Pioneer01	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Pioneer01_515932F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\MemorySwitch\Pioneer01		373304
+	47810436	Poet00	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Poet00_515932F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\MemorySwitch\Poet00		308173
+	50767364	pulinaSkeptic17	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaSkeptic17_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Skeptic\pulinaSkeptic17		30382
+	56509350	Pioneer04	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Pioneer04_515932F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\MemorySwitch\Pioneer04		430758
+	77611643	pulinaPoet5	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaPoet5_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Poet\pulinaPoet5		14422
+	95320040	pulinaPioneer13	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaPioneer13_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Pioneer\pulinaPioneer13		11972
+	101477428	pulinaMachine18	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaMachine18_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Machine\pulinaMachine18		22220
+	102608133	pulinaSkeptic6	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaSkeptic6_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Skeptic\pulinaSkeptic6		28117
+	108290277	pulinaSkeptic10	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaSkeptic10_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Skeptic\pulinaSkeptic10		12279
+	111832387	pulinaMachine21	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaMachine21_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Machine\pulinaMachine21		7502
+	119935359	Comp	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Pioneer_Comp_81B2982A.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Pioneer\Comp\Comp		1192292
+	128149367	pulinaPioneer9	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaPioneer9_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Pioneer\pulinaPioneer9		19512
+	176346799	Poet01	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Poet01_515932F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\MemorySwitch\Poet01		514618
+	196685631	Skeptic04	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Skeptic04_515932F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\MemorySwitch\Skeptic04		473860
+	203954282	pulinaPoet3	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaPoet3_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Poet\pulinaPoet3		17850
+	206389973	SynthG	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\SynthG6_81B2982A.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Groove\G\SynthG		431562
+	208237658	OrganF	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\OrganF3_81B2982A.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Groove\F\OrganF		216452
+	209139997	pulinaSkeptic4	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaSkeptic4_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Skeptic\pulinaSkeptic4		25147
+	218109914	pulinaMachine26	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaMachine26_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Machine\pulinaMachine26		31185
+	237104260	pulinaPioneer3	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaPioneer3_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Pioneer\pulinaPioneer3		14106
+	237268082	SynthF	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\SynthF1_81B2982A.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Groove\F\SynthF		447120
+	243085918	OrganG	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\OrganG1_81B2982A.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Groove\G\OrganG		217303
+	243196727	Poet02	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Poet02_515932F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\MemorySwitch\Poet02		430405
+	244662681	BassG	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\BassG_1_81B2982A.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Groove\G\BassG		196139
+	254252142	OrganF	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\OrganF1_81B2982A.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Groove\F\OrganF		229421
+	259613587	SynthG	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\SynthG7_81B2982A.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Groove\G\SynthG		423003
+	263460506	pulinaPoet2	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaPoet2_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Poet\pulinaPoet2		19273
+	284313429	pulinaMachine7	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaMachine7_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Machine\pulinaMachine7		10185
+	284929796	BassF	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Bass_F_1_81B2982A.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Groove\F\BassF		174270
+	306172770	OrganG	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\OrganG3_81B2982A.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Groove\G\OrganG		215003
+	314385899	pulinaMachine24	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaMachine24_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Machine\pulinaMachine24		4651
+	316109925	pulinaPioneer8	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaPioneer8_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Pioneer\pulinaPioneer8		19945
+	322573878	pulinaMachine10	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaMachine10_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Machine\pulinaMachine10		17933
+	331786464	pulinaMachine15	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaMachine15_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Machine\pulinaMachine15		23053
+	347691161	OrganG	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\OrganG2_81B2982A.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Groove\G\OrganG		216924
+	353704132	Jatko	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Kvarttibiisi_3_81B2982A.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Poet\Kvarttibiisi_jatko\Jatko		488896
+	355728892	pulinaPioneer7	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaPioneer7_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Pioneer\pulinaPioneer7		9752
+	357466177	pulinaSkeptic5	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaSkeptic5_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Skeptic\pulinaSkeptic5		24412
+	359757623	Skeptic05	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Skeptic05_515932F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\MemorySwitch\Skeptic05		532818
+	371166814	Sukellusdisko	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Sukellusdisko_81B2982A.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Sukellusdisko\Sukellusdisko\Sukellusdisko		2279887
+	401930522	pulinaMachine17	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaMachine17_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Machine\pulinaMachine17		4615
+	402112530	Pioneer02	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Pioneer02_515932F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\MemorySwitch\Pioneer02		433535
+	412123615	pulinaMachine4	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaMachine4_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Machine\pulinaMachine4		12863
+	427847250	pulinaSkeptic18	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaSkeptic18_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Skeptic\pulinaSkeptic18		18364
+	463842178	pulinaSkeptic1	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaSkeptic1_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Skeptic\pulinaSkeptic1		11520
+	495694601	BassG	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\BassG_2_81B2982A.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Groove\G\BassG		198081
+	496257174	Drums	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\TrickySnareBreak_81B2982A.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Groove\F\Drums		254566
+	496378699	SynthG	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\SynthG8_81B2982A.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Groove\G\SynthG		404850
+	527025417	pulinaPoet1	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaPoet1_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Poet\pulinaPoet1		25354
+	527293088	Machine05	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Machine05_515932F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\MemorySwitch\Machine05		330310
+	545888345	pulinaPioneer5	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaPioneer5_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Pioneer\pulinaPioneer5		27414
+	550510207	pulinaSkeptic8	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaSkeptic8_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Skeptic\pulinaSkeptic8		14321
+	553969179	Pioneer05	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Pioneer05_515932F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\MemorySwitch\Pioneer05		356608
+	576928151	pulinaPioneer6	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaPioneer6_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Pioneer\pulinaPioneer6		11467
+	577616638	pulinaMachine14	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaMachine14_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Machine\pulinaMachine14		17416
+	580611873	SynthF	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\SynthF2_81B2982A.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Groove\F\SynthF		454113
+	588291141	Skeptic01	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Skeptic01_515932F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\MemorySwitch\Skeptic01		461467
+	592156506	pulinaMachine13	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaMachine13_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Machine\pulinaMachine13		10899
+	600843348	Poet05	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Poet05_515932F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\MemorySwitch\Poet05		368095
+	604805597	Machine04	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Machine04_515932F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\MemorySwitch\Machine04		626619
+	607632441	pulinaMachine23	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaMachine23_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Machine\pulinaMachine23		11765
+	611458382	pulinaMachine20	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaMachine20_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Machine\pulinaMachine20		9509
+	616713281	pulinaSkeptic15	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaSkeptic15_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Skeptic\pulinaSkeptic15		14477
+	631409395	Melody	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Pioneer_Melody_81B2982A.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Pioneer\Comp\Melody		4130844
+	643679264	Skeptic03	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Skeptic03_515932F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\MemorySwitch\Skeptic03		480586
+	659406176	pulinaMachine22	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaMachine22_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Machine\pulinaMachine22		12705
+	689557487	Pioneer03	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Pioneer03_515932F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\MemorySwitch\Pioneer03		313488
+	690887782	Epilogue	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Epilogue_515932F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\MemorySwitch\Epilogue		373923
+	697736607	pulinaPoet6	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaPoet6_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Poet\pulinaPoet6		20807
+	705386573	OrganF	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\OrganF2_81B2982A.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Groove\F\OrganF		226165
+	705900400	pulinaMachine1	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaMachine1_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Machine\pulinaMachine1		11135
+	713461292	Machine01	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Machine01_515932F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\MemorySwitch\Machine01		420713
+	723909702	pulinaPioneer12	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaPioneer12_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Pioneer\pulinaPioneer12		13515
+	723977678	pulinaMachine3	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaMachine3_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Machine\pulinaMachine3		13556
+	732138722	pulinaPioneer4	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaPioneer4_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Pioneer\pulinaPioneer4		13291
+	735213310	SynthG	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\SynthG5_81B2982A.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Groove\G\SynthG		416025
+	755715634	SynthF	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\SynthF3_81B2982A.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Groove\F\SynthF		439617
+	768496604	pulinaSkeptic16	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaSkeptic16_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Skeptic\pulinaSkeptic16		24107
+	777480794	pulinaSkeptic13	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaSkeptic13_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Skeptic\pulinaSkeptic13		26132
+	782348976	pulinaMachine19	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaMachine19_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Machine\pulinaMachine19		6459
+	789990267	pulinaPioneer1	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaPioneer1_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Pioneer\pulinaPioneer1		11142
+	790513318	Machine02	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Machine02_515932F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\MemorySwitch\Machine02		417936
+	792321180	pulinaSkeptic7	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaSkeptic7_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Skeptic\pulinaSkeptic7		11219
+	795061304	pulinaSkeptic3	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaSkeptic3_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Skeptic\pulinaSkeptic3		17056
+	815998341	Alku	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Kvarttibiisi_1_81B2982A.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Poet\Kvarttibiisi_alku\Alku		423616
+	816562493	pulinaSkeptic9	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaSkeptic9_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Skeptic\pulinaSkeptic9		12103
+	823026635	pulinaSkeptic12	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaSkeptic12_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Skeptic\pulinaSkeptic12		13664
+	843234079	pulinaSkeptic14	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaSkeptic14_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Skeptic\pulinaSkeptic14		9881
+	849232682	pulinaPioneer10	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaPioneer10_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Pioneer\pulinaPioneer10		18826
+	850495192	pulinaMachine8	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaMachine8_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Machine\pulinaMachine8		12205
+	870012837	Movement	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Movement_515932F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\MovementSwitch\Movement		652375
+	873326208	pulinaPoet8	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaPoet8_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Poet\pulinaPoet8		31733
+	874297669	pulinaPoet4	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaPoet4_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Poet\pulinaPoet4		21178
+	893616719	pulinaMachine16	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaMachine16_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Machine\pulinaMachine16		6824
+	906981127	pulinaPoet9	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaPoet9_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Poet\pulinaPoet9		13491
+	907348666	MovementPyramid	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Movement_2A894724.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\MovementSwitch\MovementPyramid		173287
+	930123747	pulinaPoet7	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaPoet7_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Poet\pulinaPoet7		22302
+	940883368	Machine03	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Machine03_515932F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\MemorySwitch\Machine03		356407
+	947947956	pulinaMachine25	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaMachine25_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Machine\pulinaMachine25		20456
+	957540460	Poet03	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Poet03_515932F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\MemorySwitch\Poet03		393349
+	962927899	pulinaMachine6	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaMachine6_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Machine\pulinaMachine6		16428
+	975464172	pulinaMachine11	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaMachine11_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Machine\pulinaMachine11		16275
+	984467219	Jatko	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Kvarttibiisi_2_81B2982A.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Poet\Kvarttibiisi_jatko\Jatko		470240
+	992808139	BassF	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Bass_F_2_81B2982A.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Groove\F\BassF		176134
+	993212446	pulinaMachine5	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaMachine5_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Machine\pulinaMachine5		12893
+	1014438482	OrganF	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\OrganF4_81B2982A.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Groove\F\OrganF		210527
+	1016657545	pulinaPioneer2	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaPioneer2_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Pioneer\pulinaPioneer2		12425
+	1019773329	pulinaSkeptic11	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaSkeptic11_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Skeptic\pulinaSkeptic11		13168
+	1040912717	pulinaMachine9	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaMachine9_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Machine\pulinaMachine9		18880
+	1044922643	pulinaPioneer11	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaPioneer11_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Pioneer\pulinaPioneer11		24124
+	1054769961	pulinaMachine12	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaMachine12_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Machine\pulinaMachine12		18303
+	1056384870	pulinaSkeptic2	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\pulinaSkeptic2_7A248470.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\PulinaSwitch\Pulina\Skeptic\pulinaSkeptic2		19242
+	1059973262	Skeptic02	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\Skeptic02_515932F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Memories\MemorySwitch\Skeptic02		585349
+	1069442164	OrganG	Y:\Documents\Aalto\Game Projects\GameProject2\GameProject2_WwiseProject\.cache\Windows\SFX\OrganG4_81B2982A.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Groove\G\OrganG		226916
+

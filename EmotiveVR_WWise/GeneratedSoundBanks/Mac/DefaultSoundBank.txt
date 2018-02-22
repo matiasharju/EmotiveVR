@@ -1,0 +1,28 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1707179908	VideoAudio			\Default Work Unit\VideoAudio	
+	2279279248	InteractiveMusic			\Default Work Unit\InteractiveMusic	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	2275494527	ValenceLevel			\Default Work Unit\ValenceLevel	
+
+Effect plug-ins	ID	Name	Type				Notes
+	3013737258	Bass_Remover_4	Wwise Parametric EQ			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	25226512	Sberg_bass_4bars	Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\.cache\Mac\SFX\Sberg_bass_4bars_eights_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Interactive_Music\Schonberg-style C\Sberg_bass_4bars		1675700
+	26396075	Sberg_chords_4bars	Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\.cache\Mac\SFX\Sberg_chords_4bars_stressed2_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Interactive_Music\Schonberg-style C\Sberg_chords_4bars		4189156
+	53418009	Sberg_bass_4bars	Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\.cache\Mac\SFX\Sberg_bass_4bars_quarters_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Interactive_Music\Schonberg-style C\Sberg_bass_4bars		3351336
+	82241415	Sberg_bass_4bars	Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\.cache\Mac\SFX\Sberg_bass_4bars_quarters_Cis_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Interactive_Music\Schonberg-style Cis\Sberg_bass_4bars		4189156
+	174224361	Sberg_strings_4bars_tremolo	Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\.cache\Mac\SFX\Sberg_strings_tremolo_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Interactive_Music\Schonberg-style C\Sberg_strings_4bars_tremolo		3665516
+	254578959	Sberg_chords_4bars	Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\.cache\Mac\SFX\Sberg_chords_4bars_stressed_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Interactive_Music\Schonberg-style C\Sberg_chords_4bars		4189156
+	275870047	Sberg_bass_4bars_fis-e	Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\.cache\Mac\SFX\Sberg_low_stress_1_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Interactive_Music\Schonberg-style C\Sberg_bass_4bars_fis-e		1675700
+	426174909	Sberg_chords_4bars	Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\.cache\Mac\SFX\Sberg_chords_4bars_positive_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Interactive_Music\Schonberg-style C\Sberg_chords_4bars		4189156
+	427292005	Sberg_bass_4bars_fis-e	Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\.cache\Mac\SFX\Sberg_low_stress_3_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Interactive_Music\Schonberg-style C\Sberg_bass_4bars_fis-e		1570976
+	429010084	Freud_2F1T07_DEMO_ambiX_2nd_order_9ch	Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\.cache\Mac\SFX\Freud_2F1T07_DEMO_ambiX_2nd_order_9ch_CFD4076D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Freud_2F1T07_DEMO_ambiX_2nd_order_9ch		48358594
+	439132987	Sberg_chords_4bars	Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\.cache\Mac\SFX\Sberg_chords_4bars_neutral_Cis_1_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Interactive_Music\Schonberg-style Cis\Sberg_chords_4bars		4189156
+	553235388	Sberg_bass_4bars_fis-e	Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\.cache\Mac\SFX\Sberg_low_stress_2_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Interactive_Music\Schonberg-style C\Sberg_bass_4bars_fis-e		1780428
+	559526882	Sberg_chords_4bars	Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\.cache\Mac\SFX\Sberg_chords_major_positive_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Interactive_Music\Schonberg-style C\Sberg_chords_4bars		4189156
+	621085252	Sberg_bass_4bars_fis-e	Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\.cache\Mac\SFX\Sberg_low_stress_4_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Interactive_Music\Schonberg-style C\Sberg_bass_4bars_fis-e		2304064
+	773909102	Sberg_strings_major_positive	Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\.cache\Mac\SFX\Sberg_strings_major_positive_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Interactive_Music\Schonberg-style C\Sberg_strings_major_positive		4189156
+	938203090	Sberg_bass_4bars	Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\.cache\Mac\SFX\Sberg_bass_4bars_halves_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Music\Interactive_Music\Schonberg-style C\Sberg_bass_4bars		3351336
+

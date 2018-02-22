@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{73D3D798-723D-4452-BAD3-99FF9084AF40}" SchemaVersion="85">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{73D3D798-723D-4452-BAD3-99FF9084AF40}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="InteractiveMusic" ID="{B2203788-DB09-4858-8D6E-9A41ECFCC6F4}">
+					<ChildrenList>
+						<Action Name="" ID="{CB4B7EEA-7D65-4525-90B0-634D76222A53}" ShortID="793569291">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="23"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mid" ID="{A40534C7-4D69-4C05-9290-F6CFB09DB954}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9E08344A-C906-4CE2-B828-FDC326358B8A}" ShortID="876768807">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Interactive_Music" ID="{E47BA677-0374-4E5E-A748-D06EEE183349}" WorkUnitID="{F0D9E8B3-300F-4782-B1B2-BE13E6C3CEB8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="VideoAudio" ID="{91F403A9-23F9-4B4A-A261-9E283D56FBA0}">
+					<ChildrenList>
+						<Action Name="" ID="{A40FAAB6-D29D-4E1A-BB41-32E34111CCAF}" ShortID="182858763">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Freud_2F1T07_DEMO_ambiX_2nd_order_9ch" ID="{7CCA873C-F81E-442F-AEF7-204661685C1A}" WorkUnitID="{7011B163-7DEB-4017-B5E0-DAF3F1916B50}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

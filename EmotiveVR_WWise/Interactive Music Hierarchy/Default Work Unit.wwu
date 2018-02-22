@@ -1,0 +1,1568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F0D9E8B3-300F-4782-B1B2-BE13E6C3CEB8}" SchemaVersion="85">
+	<InteractiveMusic>
+		<WorkUnit Name="Default Work Unit" ID="{F0D9E8B3-300F-4782-B1B2-BE13E6C3CEB8}" PersistMode="Standalone">
+			<ChildrenList>
+				<MusicSwitchContainer Name="Music" ID="{725A72E3-B6FC-4C6F-9527-CD4C34598777}" ShortID="785234066">
+					<PropertyList>
+						<Property Name="Tempo" Type="Real64" Value="55"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BDB338AD-5F17-4284-ABCA-FA5C700A3477}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Music Bus" ID="{B14C0733-19B6-4B7C-B615-27FF22835E40}" WorkUnitID="{915B61B1-18DF-4962-AED9-7E215C7469A8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<MusicPlaylistContainer Name="Interactive_Music" ID="{E47BA677-0374-4E5E-A748-D06EEE183349}" ShortID="858049448">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BDB338AD-5F17-4284-ABCA-FA5C700A3477}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{915B61B1-18DF-4962-AED9-7E215C7469A8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="Schonberg-style C" ID="{A357E2D0-16B0-4A00-AE9C-556342C62357}" ShortID="683600434">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="38181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BDB338AD-5F17-4284-ABCA-FA5C700A3477}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{915B61B1-18DF-4962-AED9-7E215C7469A8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Sberg_bass_4bars" ID="{082AA98B-20E7-40C9-B6A4-B6D0A0D96DB1}" ShortID="264836259">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="3"/>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{7424BCA9-C1E9-478B-A268-FDBA1FAA15C1}" ShortID="810339401">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="ValenceLevel" ID="{EEA5220B-08C9-460F-ADFF-810AFF75B7C9}" WorkUnitID="{66F9F794-BB22-49DF-915F-348F8312E0FE}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{CB40A642-FE81-43A8-9699-2E41CA340754}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>58.4459459459459</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>80.06757</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{915B61B1-18DF-4962-AED9-7E215C7469A8}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="Intensity" ID="{EB980085-A059-4C3E-8C15-6DD952591076}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Sberg_bass_4bars_eights" ID="{0D6D9D2B-CDE9-4A46-98E1-3D7C5581ADA8}" ShortID="25226512">
+													<Language>SFX</Language>
+													<AudioFile>Sberg_bass_4bars_eights.wav</AudioFile>
+												</AudioFileSource>
+												<AudioFileSource Name="Sberg_bass_4bars_halves" ID="{6EFDD47D-370F-4420-AAE3-E2B48FFF351D}" ShortID="938203090">
+													<Language>SFX</Language>
+													<AudioFile>Sberg_bass_4bars_halves.wav</AudioFile>
+												</AudioFileSource>
+												<AudioFileSource Name="Sberg_bass_4bars_quarters" ID="{F72F3631-961A-4BBF-BE54-EF922C303143}" ShortID="53418009">
+													<Language>SFX</Language>
+													<AudioFile>Sberg_bass_4bars_quarters.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{8F1F22CB-BF68-4E60-A586-C4ABE9F0A164}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<ChildrenList>
+														<MusicTransition Name="Transition" ID="{82D06648-E9F4-4CDC-8180-751ACC51F7AB}">
+															<PropertyList>
+																<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+															</PropertyList>
+															<TransitionInfo>
+																<SourceFadeOut>
+																	<MusicFade Name="Source Fade-out" ID="{949D98BB-F50F-4C24-A0A5-46097CA6BFA5}">
+																		<PropertyList>
+																			<Property Name="FadeTime" Type="Real64" Value="1"/>
+																			<Property Name="FadeType" Type="int16" Value="1"/>
+																		</PropertyList>
+																	</MusicFade>
+																</SourceFadeOut>
+															</TransitionInfo>
+														</MusicTransition>
+													</ChildrenList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{793F04B5-AEB5-476D-AFF9-56DA729DE3AD}">
+													<ClipList>
+														<MusicClip Name="Sberg_bass_4bars_halves" ID="{DB70CCC2-7880-4A3B-AA0D-7F336F33D467}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="17454.5416666667"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Sberg_bass_4bars_halves" ID="{6EFDD47D-370F-4420-AAE3-E2B48FFF351D}"/>
+														</MusicClip>
+													</ClipList>
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Slow" ID="{3ACDC2D6-747F-45F2-A550-5768BDA5C1D5}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+												<MusicTrackSequence Name="" ID="{5D4D312F-1394-476D-BF89-B4294EE2299F}">
+													<ClipList>
+														<MusicClip Name="Sberg_bass_4bars_quarters" ID="{4DB91BB4-4B43-42EE-AA77-A7BF71489371}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="17454.5416666667"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Sberg_bass_4bars_quarters" ID="{F72F3631-961A-4BBF-BE54-EF922C303143}"/>
+														</MusicClip>
+													</ClipList>
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Mid" ID="{A40534C7-4D69-4C05-9290-F6CFB09DB954}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+												<MusicTrackSequence Name="" ID="{FCC73031-8739-4184-A3F2-7B1ADDCA0878}">
+													<ClipList>
+														<MusicClip Name="Sberg_bass_4bars_eights" ID="{6381458D-756A-4FDA-BE13-9B9BD8955402}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="17454.5454545455"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Sberg_bass_4bars_eights" ID="{0D6D9D2B-CDE9-4A46-98E1-3D7C5581ADA8}"/>
+															<PropertyCurveList>
+																<PropertyCurve PropertyName="Highpass">
+																	<Curve Name="" ID="{4E40AB21-CDA3-4C31-95B5-2D7CFC9F35D6}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>17.45455</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+																<PropertyCurve PropertyName="Lowpass">
+																	<Curve Name="" ID="{DE8B293B-53C8-4900-B156-F82E298E9F3C}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>17.45455</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+																<PropertyCurve PropertyName="Volume">
+																	<Curve Name="" ID="{1C122613-AE40-4B21-9F72-0847B8577506}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>17.45455</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+															</PropertyCurveList>
+														</MusicClip>
+													</ClipList>
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Fast" ID="{73E37C40-4B83-4EB0-A133-7551578612D1}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+										<MusicTrack Name="Sberg_bass_4bars_fis-e" ID="{397646D8-E2A5-4150-8FA7-ADBE7EEAC1B4}" ShortID="305063878">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+													<RTPCList>
+														<RTPC Name="" ID="{F15F9EB6-1D74-40B5-98F1-E26D2640FC2C}" ShortID="918285554">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="ValenceLevel" ID="{EEA5220B-08C9-460F-ADFF-810AFF75B7C9}" WorkUnitID="{66F9F794-BB22-49DF-915F-348F8312E0FE}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{54E546B6-5AB1-4B23-B8C6-B36A3058B805}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.001</XPos>
+																		<YPos>-2.48279</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>12.83784</XPos>
+																		<YPos>-6.7637</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>28.20946</XPos>
+																		<YPos>-6.45864</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>31.25</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{915B61B1-18DF-4962-AED9-7E215C7469A8}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="Valence" ID="{30F20821-4533-4824-9204-CD28D234F3F0}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Sberg_low_stress_1" ID="{A8799B54-12E6-459F-AE93-2309177EF931}" ShortID="275870047">
+													<Language>SFX</Language>
+													<AudioFile>Sberg_low_stress_1.wav</AudioFile>
+												</AudioFileSource>
+												<AudioFileSource Name="Sberg_low_stress_2" ID="{C99D24D7-969F-4E66-877C-BD702197B89A}" ShortID="553235388">
+													<Language>SFX</Language>
+													<AudioFile>Sberg_low_stress_2.wav</AudioFile>
+												</AudioFileSource>
+												<AudioFileSource Name="Sberg_low_stress_3" ID="{3E0ACFC7-FB7A-4056-99A6-014D27F998D2}" ShortID="427292005">
+													<Language>SFX</Language>
+													<AudioFile>Sberg_low_stress_3.wav</AudioFile>
+												</AudioFileSource>
+												<AudioFileSource Name="Sberg_low_stress_4" ID="{2EC046E7-1826-4A2F-A7EE-82B9DAC8FC15}" ShortID="621085252">
+													<Language>SFX</Language>
+													<AudioFile>Sberg_low_stress_4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{76243703-A752-4913-BBED-0FE243D3DDC0}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<ChildrenList>
+														<MusicTransition Name="Transition" ID="{0966A15A-4F20-4F9E-A370-49B6EB272CF7}">
+															<PropertyList>
+																<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+															</PropertyList>
+															<TransitionInfo>
+																<SourceFadeOut>
+																	<MusicFade Name="Source Fade-out" ID="{CB7D8079-64AB-47B7-9EE9-E4F4DDA9CF5A}">
+																		<PropertyList>
+																			<Property Name="FadeTime" Type="Real64" Value="1"/>
+																			<Property Name="FadeType" Type="int16" Value="1"/>
+																		</PropertyList>
+																	</MusicFade>
+																</SourceFadeOut>
+															</TransitionInfo>
+														</MusicTransition>
+													</ChildrenList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{A2B21511-815E-4977-9A40-5CCD815FFC21}">
+													<ClipList>
+														<MusicClip Name="Sberg_low_stress_1" ID="{A2EEDDB1-6020-4573-945A-DA82274A8F31}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="8727.27083333333"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Sberg_low_stress_1" ID="{A8799B54-12E6-459F-AE93-2309177EF931}"/>
+														</MusicClip>
+														<MusicClip Name="Sberg_low_stress_1" ID="{0A0D56F8-A3A0-49A7-B39B-232D262309AD}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="8727.27083333333"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																<Property Name="PlayAt" Type="Real64" Value="8727.27272727273"/>
+															</PropertyList>
+															<AudioSourceRef Name="Sberg_low_stress_1" ID="{A8799B54-12E6-459F-AE93-2309177EF931}"/>
+														</MusicClip>
+													</ClipList>
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Negative2" ID="{7B8148F7-9F86-4EFE-94D8-328557B84FCB}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+												<MusicTrackSequence Name="" ID="{70734488-28DC-4889-912A-C962C2BC15D3}">
+													<ClipList>
+														<MusicClip Name="Sberg_low_stress_2" ID="{614168C1-2C9E-4D87-88F5-9F2B6BB831D7}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="9272.72916666667"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Sberg_low_stress_2" ID="{C99D24D7-969F-4E66-877C-BD702197B89A}"/>
+														</MusicClip>
+														<MusicClip Name="Sberg_low_stress_2" ID="{EBCF1EC6-8425-47AF-A590-D997419853EA}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="545.454545454545"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																<Property Name="PlayAt" Type="Real64" Value="9272.72727272727"/>
+															</PropertyList>
+															<AudioSourceRef Name="Sberg_low_stress_2" ID="{C99D24D7-969F-4E66-877C-BD702197B89A}"/>
+															<PropertyCurveList>
+																<PropertyCurve PropertyName="Highpass">
+																	<Curve Name="" ID="{AB041F77-6327-4709-B21D-C63970AEF45C}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>0.54545</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+																<PropertyCurve PropertyName="Lowpass">
+																	<Curve Name="" ID="{2A9BA8F7-0180-42FE-99C2-D7D82A82E74F}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>0.54545</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+																<PropertyCurve PropertyName="Volume">
+																	<Curve Name="" ID="{A69857B6-2250-433B-B878-2947D36E0DFB}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>0.54545</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+															</PropertyCurveList>
+														</MusicClip>
+														<MusicClip Name="Sberg_low_stress_2" ID="{19F9F32C-F06F-489E-B1F0-0B56302FA3C4}">
+															<PropertyList>
+																<Property Name="BeginTrimOffset" Type="Real64" Value="1481.86785891704"/>
+																<Property Name="EndTrimOffset" Type="Real64" Value="9272.72916666667"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																<Property Name="PlayAt" Type="Real64" Value="8248.8822652757"/>
+															</PropertyList>
+															<AudioSourceRef Name="Sberg_low_stress_2" ID="{C99D24D7-969F-4E66-877C-BD702197B89A}"/>
+														</MusicClip>
+													</ClipList>
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Negative2" ID="{7B8148F7-9F86-4EFE-94D8-328557B84FCB}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+												<MusicTrackSequence Name="" ID="{58B82093-FB85-40C4-A85A-C7424A856A6F}">
+													<ClipList>
+														<MusicClip Name="Sberg_low_stress_3" ID="{C05206BB-39A3-4C84-893C-B8C538651EAF}">
+															<PropertyList>
+																<Property Name="BeginTrimOffset" Type="Real64" Value="71.1624441132638"/>
+																<Property Name="EndTrimOffset" Type="Real64" Value="8181.83333333333"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																<Property Name="PlayAt" Type="Real64" Value="555.886736214605"/>
+															</PropertyList>
+															<AudioSourceRef Name="Sberg_low_stress_3" ID="{3E0ACFC7-FB7A-4056-99A6-014D27F998D2}"/>
+															<PropertyCurveList>
+																<PropertyCurve PropertyName="Highpass">
+																	<Curve Name="" ID="{1C4A1CF7-5203-41C7-A342-B2E366AFBBAE}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0.07116</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>8.18183333333333</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+																<PropertyCurve PropertyName="Lowpass">
+																	<Curve Name="" ID="{D5AA7A8E-A41C-4477-A529-8EAB730963C2}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0.07116</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>8.18183333333333</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+																<PropertyCurve PropertyName="Volume">
+																	<Curve Name="" ID="{2E43A5A2-4F26-4DE5-A987-918D0201F20C}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0.07116</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>8.18183333333333</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+															</PropertyCurveList>
+														</MusicClip>
+														<MusicClip Name="Sberg_low_stress_4" ID="{5460265C-6821-4CC5-AB82-F1438660AD5E}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="12000"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																<Property Name="PlayAt" Type="Real64" Value="8727.27272727273"/>
+															</PropertyList>
+															<AudioSourceRef Name="Sberg_low_stress_4" ID="{2EC046E7-1826-4A2F-A7EE-82B9DAC8FC15}"/>
+														</MusicClip>
+													</ClipList>
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Negative2" ID="{7B8148F7-9F86-4EFE-94D8-328557B84FCB}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+										<MusicTrack Name="Sberg_chords_4bars" ID="{CF4BC60D-5F35-4B74-B557-E11DF4F5F0A0}" ShortID="105375482">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="3"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{915B61B1-18DF-4962-AED9-7E215C7469A8}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="Valence" ID="{30F20821-4533-4824-9204-CD28D234F3F0}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Sberg_chords_4bars_positive" ID="{EE31F4CA-1163-42A5-8967-7CE324AC68BF}" ShortID="426174909">
+													<Language>SFX</Language>
+													<AudioFile>Sberg_chords_4bars_positive.wav</AudioFile>
+												</AudioFileSource>
+												<AudioFileSource Name="Sberg_chords_4bars_stressed2" ID="{FF195BC6-307D-4E56-879A-E8A516306EEC}" ShortID="26396075">
+													<Language>SFX</Language>
+													<AudioFile>Sberg_chords_4bars_stressed2.wav</AudioFile>
+												</AudioFileSource>
+												<AudioFileSource Name="Sberg_chords_4bars_stressed" ID="{AF622290-FA87-416C-9A76-D7706A525315}" ShortID="254578959">
+													<Language>SFX</Language>
+													<AudioFile>Sberg_chords_4bars_stressed.wav</AudioFile>
+												</AudioFileSource>
+												<AudioFileSource Name="Sberg_chords_major_positive" ID="{BED626F2-97E9-434B-9550-2DECDF67862F}" ShortID="559526882">
+													<Language>SFX</Language>
+													<AudioFile>Sberg_chords_major_positive.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{C7072CDB-7C2A-4E42-8D8A-A302D484BE89}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<ChildrenList>
+														<MusicTransition Name="Transition" ID="{F81302DE-2493-467F-A993-D96A32137386}">
+															<PropertyList>
+																<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+															</PropertyList>
+															<TransitionInfo>
+																<SourceFadeOut>
+																	<MusicFade Name="Source Fade-out" ID="{1D62AAFF-BF21-43ED-9C77-C0C7C95892DA}">
+																		<PropertyList>
+																			<Property Name="FadeTime" Type="Real64" Value="1"/>
+																			<Property Name="FadeType" Type="int16" Value="1"/>
+																		</PropertyList>
+																	</MusicFade>
+																</SourceFadeOut>
+															</TransitionInfo>
+														</MusicTransition>
+													</ChildrenList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{83C04EE5-6280-42E3-9A0B-E970BD2ECD58}">
+													<ClipList>
+														<MusicClip Name="Sberg_chords_major_positive" ID="{CC199D25-2573-431A-91A2-EB6992815E7A}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="21818.1875"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Sberg_chords_major_positive" ID="{BED626F2-97E9-434B-9550-2DECDF67862F}"/>
+														</MusicClip>
+													</ClipList>
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Positive1" ID="{9ADE10CB-BFC2-4589-AED9-FF0FB0DE6064}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+												<MusicTrackSequence Name="" ID="{CB2AC9C3-E617-4417-BDC7-1650DBB3C7DD}">
+													<ClipList>
+														<MusicClip Name="Sberg_chords_major_positive" ID="{2D87AF3B-1FF8-4A64-A510-3B33F5EDE0D1}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="21818.1875"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Sberg_chords_major_positive" ID="{BED626F2-97E9-434B-9550-2DECDF67862F}"/>
+														</MusicClip>
+													</ClipList>
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Positive2" ID="{E72CF725-5E14-4A1C-BEB1-895CE5BE678D}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+												<MusicTrackSequence Name="" ID="{8BF16AF4-30F8-4B3D-ACC5-EB57CB313044}">
+													<ClipList>
+														<MusicClip Name="Sberg_chords_major_positive" ID="{2A356916-772A-44A5-AF11-560E67782225}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="21818.1875"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Sberg_chords_major_positive" ID="{BED626F2-97E9-434B-9550-2DECDF67862F}"/>
+														</MusicClip>
+													</ClipList>
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Positive3" ID="{A5C726AC-AEDB-4F04-89D7-76AACF9FEB43}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+												<MusicTrackSequence Name="" ID="{6FF63BD8-C9D7-44DB-8927-E9D8C562D2A2}">
+													<ClipList>
+														<MusicClip Name="Sberg_chords_4bars_positive" ID="{EC654CF2-8C53-4846-8047-1E0BA8FDB023}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="21818.1875"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Sberg_chords_4bars_positive" ID="{EE31F4CA-1163-42A5-8967-7CE324AC68BF}"/>
+														</MusicClip>
+													</ClipList>
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Neutral" ID="{86829211-944F-43AF-B222-EE694E5A52F8}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+												<MusicTrackSequence Name="" ID="{33BF79B1-5869-4D6D-AC34-37A16A54DE38}">
+													<ClipList>
+														<MusicClip Name="Sberg_chords_4bars_stressed" ID="{22E6C116-9BBA-4100-84C4-29B4162F0E58}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="21818.1875"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Sberg_chords_4bars_stressed" ID="{AF622290-FA87-416C-9A76-D7706A525315}"/>
+														</MusicClip>
+													</ClipList>
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Negative1" ID="{CEC956F8-0F39-413C-99CE-0DE148EB238E}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+												<MusicTrackSequence Name="" ID="{A0172005-51B2-4187-BF70-5BE519931B77}">
+													<ClipList>
+														<MusicClip Name="Sberg_chords_4bars_stressed2" ID="{150E5476-4E19-451C-BB66-A34753C2E93D}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="21818.1875"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Sberg_chords_4bars_stressed2" ID="{FF195BC6-307D-4E56-879A-E8A516306EEC}"/>
+														</MusicClip>
+													</ClipList>
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Negative2" ID="{7B8148F7-9F86-4EFE-94D8-328557B84FCB}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+												<MusicTrackSequence Name="" ID="{AE5A6AFE-E801-4290-835A-0987C0B1DAE7}">
+													<ClipList>
+														<MusicClip Name="Sberg_chords_4bars_stressed2" ID="{62C5FBCF-D6FD-443B-9AAE-37D64CB72E79}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="21818.1875"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Sberg_chords_4bars_stressed2" ID="{FF195BC6-307D-4E56-879A-E8A516306EEC}"/>
+														</MusicClip>
+													</ClipList>
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Negative3" ID="{5A893E9C-E601-419A-9EA0-3ECB42A0C7F0}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+										<MusicTrack Name="Sberg_strings_4bars_tremolo" ID="{90BF6B8D-8C12-43F0-9489-4AB9658CE1BD}" ShortID="424215365">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{C5B4C143-81BE-406A-B6B9-D6E41FE2AB1E}" ShortID="561574715">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="ValenceLevel" ID="{EEA5220B-08C9-460F-ADFF-810AFF75B7C9}" WorkUnitID="{66F9F794-BB22-49DF-915F-348F8312E0FE}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{1C489BAB-F35A-4EBF-86AD-08755035B942}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-4.77111</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>21.79054</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{915B61B1-18DF-4962-AED9-7E215C7469A8}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="Valence" ID="{30F20821-4533-4824-9204-CD28D234F3F0}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Sberg_strings_tremolo" ID="{94CC2939-3C7D-4F1C-AC82-AEAF165EE267}" ShortID="174224361">
+													<Language>SFX</Language>
+													<AudioFile>Sberg_strings_tremolo.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{60A3C8C9-670F-4106-BBEF-CE253B26AC3B}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<ChildrenList>
+														<MusicTransition Name="Transition" ID="{DAF4DDDC-FDEB-42BC-96BA-05663AE16580}">
+															<PropertyList>
+																<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+																<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+															</PropertyList>
+															<TransitionInfo>
+																<SourceFadeOut>
+																	<MusicFade Name="Source Fade-out" ID="{463CC60C-A3F6-40AF-90DD-C44FBF702850}">
+																		<PropertyList>
+																			<Property Name="FadeOffset" Type="Real64" Value="0.9"/>
+																			<Property Name="FadeTime" Type="Real64" Value="2"/>
+																			<Property Name="FadeType" Type="int16" Value="1"/>
+																		</PropertyList>
+																	</MusicFade>
+																</SourceFadeOut>
+															</TransitionInfo>
+														</MusicTransition>
+													</ChildrenList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{E5B86C00-FB74-4C72-9BA3-7340487B633D}">
+													<ClipList>
+														<MusicClip Name="Sberg_strings_tremolo" ID="{B3B10FFD-B9B9-4192-842A-5B15D98AA5C8}">
+															<PropertyList>
+																<Property Name="BeginTrimOffset" Type="Real64" Value="272.727272727273"/>
+																<Property Name="EndTrimOffset" Type="Real64" Value="19090.8958333333"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																<Property Name="PlayAt" Type="Real64" Value="-272.727272727273"/>
+															</PropertyList>
+															<AudioSourceRef Name="Sberg_strings_tremolo" ID="{94CC2939-3C7D-4F1C-AC82-AEAF165EE267}"/>
+															<PropertyCurveList>
+																<PropertyCurve PropertyName="Highpass">
+																	<Curve Name="" ID="{E7B7326B-5B6C-4309-B692-EFFFF1343F6E}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0.27273</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>19.0908958333333</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+																<PropertyCurve PropertyName="Lowpass">
+																	<Curve Name="" ID="{ACC3760F-7BD8-41D3-886F-17CC618638DE}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="1"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0.27273</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>19.0908958333333</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+																<PropertyCurve PropertyName="Volume">
+																	<Curve Name="" ID="{DA64E689-5AF2-4797-B5F1-B13630524727}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0.27273</XPos>
+																				<YPos>0</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>19.0908958333333</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</PropertyCurve>
+															</PropertyCurveList>
+														</MusicClip>
+													</ClipList>
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Negative3" ID="{5A893E9C-E601-419A-9EA0-3ECB42A0C7F0}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+										<MusicTrack Name="Sberg_strings_major_positive" ID="{CB789684-2C61-4922-852D-39F5F21BCA1C}" ShortID="431598953">
+											<PropertyList>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{D6C5E8E4-EBBF-4F1F-BAB9-DED194498E0C}" ShortID="20733881">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="ValenceLevel" ID="{EEA5220B-08C9-460F-ADFF-810AFF75B7C9}" WorkUnitID="{66F9F794-BB22-49DF-915F-348F8312E0FE}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{06EF71EB-D3CB-404C-9A9F-F159659C9453}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>67.22973</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>86.65541</XPos>
+																		<YPos>-5.81313</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>-3.67289</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
+													<ObjectRef Name="Bass_Remover_4" ID="{F641E9BC-59FE-4DDD-B162-B5377EF599C2}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{915B61B1-18DF-4962-AED9-7E215C7469A8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Sberg_strings_major_positive" ID="{3369F33B-A2C4-423C-A19D-A6D7D400B417}" ShortID="773909102">
+													<Language>SFX</Language>
+													<AudioFile>Sberg_strings_major_positive.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{BDD3EF3E-EA79-401E-A1B8-13202D6CC757}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{59CC7D74-5AEE-4438-92F7-13ACB1BB6A7D}">
+													<ClipList>
+														<MusicClip Name="Sberg_strings_major_positive" ID="{46BF5FD0-B015-413A-B809-0A0736A0D8D3}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="21818.1875"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Sberg_strings_major_positive" ID="{3369F33B-A2C4-423C-A19D-A6D7D400B417}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{13CC4925-CB3E-4170-A64B-1D13F8068CEB}"/>
+										<MusicCue Name="Exit Cue" ID="{E07215E9-C7D5-4FB5-8B38-D17DEBF6DC01}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="17454.5454545455"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+								<MusicSegment Name="Schonberg-style Cis" ID="{D5868605-392F-411E-BB71-C1E22345E4AC}" ShortID="395505365">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="38181.8333333333"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BDB338AD-5F17-4284-ABCA-FA5C700A3477}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{915B61B1-18DF-4962-AED9-7E215C7469A8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Sberg_bass_4bars" ID="{6063C508-B3F9-4949-9550-5ED00BEED6CE}" ShortID="480216589">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="3"/>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{0867252C-04A9-4124-80F6-94331282B0B7}" ShortID="66646182">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="ValenceLevel" ID="{EEA5220B-08C9-460F-ADFF-810AFF75B7C9}" WorkUnitID="{66F9F794-BB22-49DF-915F-348F8312E0FE}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{0874A330-0283-4F28-9601-0F7641360DFE}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>58.4459459459459</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>80.06757</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{915B61B1-18DF-4962-AED9-7E215C7469A8}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="Intensity" ID="{EB980085-A059-4C3E-8C15-6DD952591076}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Sberg_bass_4bars_quarters_Cis_01" ID="{FB309B91-2FEC-4A0C-A151-3FA8A5670B6B}" ShortID="635935955">
+													<Language>SFX</Language>
+													<AudioFile>Sberg_bass_4bars_quarters_Cis.wav</AudioFile>
+													<ConvertedFileIDList>
+														<File ID="82241415"/>
+													</ConvertedFileIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{A709AE0D-0D48-4EE8-A983-1ED64CC87FCC}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<ChildrenList>
+														<MusicTransition Name="Transition" ID="{49891C1C-51FA-4029-8DE6-9528344D7305}">
+															<PropertyList>
+																<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+															</PropertyList>
+															<TransitionInfo>
+																<SourceFadeOut>
+																	<MusicFade Name="Source Fade-out" ID="{4FBE2A00-6931-4CE1-88BE-0869BBC27FA9}">
+																		<PropertyList>
+																			<Property Name="FadeTime" Type="Real64" Value="1"/>
+																			<Property Name="FadeType" Type="int16" Value="1"/>
+																		</PropertyList>
+																	</MusicFade>
+																</SourceFadeOut>
+															</TransitionInfo>
+														</MusicTransition>
+													</ChildrenList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{1A714146-AD86-4D28-B7B3-69834E24A9FE}">
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Slow" ID="{3ACDC2D6-747F-45F2-A550-5768BDA5C1D5}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+												<MusicTrackSequence Name="" ID="{7244FDD5-2FDB-4125-867E-F983888DC501}">
+													<ClipList>
+														<MusicClip Name="Sberg_bass_4bars_quarters_Cis_01" ID="{28BA1C98-8949-44E3-AC7D-A4C5A70896CA}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="21818.1875"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Sberg_bass_4bars_quarters_Cis_01" ID="{FB309B91-2FEC-4A0C-A151-3FA8A5670B6B}"/>
+														</MusicClip>
+													</ClipList>
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Mid" ID="{A40534C7-4D69-4C05-9290-F6CFB09DB954}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+												<MusicTrackSequence Name="" ID="{0E5858EE-D190-457D-BE93-3D89B2E81C59}">
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Fast" ID="{73E37C40-4B83-4EB0-A133-7551578612D1}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+										<MusicTrack Name="Sberg_bass_4bars_fis-e" ID="{7C3B4E46-81E4-4DE4-9254-B934FFF5133B}" ShortID="1021336166">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="1"/>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+													<RTPCList>
+														<RTPC Name="" ID="{6E7F6EC0-4A6E-4D12-9351-0E1E1E9E3816}" ShortID="948179718">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="ValenceLevel" ID="{EEA5220B-08C9-460F-ADFF-810AFF75B7C9}" WorkUnitID="{66F9F794-BB22-49DF-915F-348F8312E0FE}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{1B55635E-E94D-4566-AAD8-6D565107E42F}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.001</XPos>
+																		<YPos>-2.48279</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>12.83784</XPos>
+																		<YPos>-6.7637</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>28.20946</XPos>
+																		<YPos>-6.45864</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>31.25</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{915B61B1-18DF-4962-AED9-7E215C7469A8}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="Valence" ID="{30F20821-4533-4824-9204-CD28D234F3F0}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+												</Reference>
+											</ReferenceList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{1E5FDF6B-4FE2-4F64-8F06-4898D912C262}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<ChildrenList>
+														<MusicTransition Name="Transition" ID="{3DCA6636-126E-4815-84E8-7DE4A9CE442C}">
+															<PropertyList>
+																<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+															</PropertyList>
+															<TransitionInfo>
+																<SourceFadeOut>
+																	<MusicFade Name="Source Fade-out" ID="{7FC5292C-A27F-48F3-AB5D-9E1ECC2E09A3}">
+																		<PropertyList>
+																			<Property Name="FadeTime" Type="Real64" Value="1"/>
+																			<Property Name="FadeType" Type="int16" Value="1"/>
+																		</PropertyList>
+																	</MusicFade>
+																</SourceFadeOut>
+															</TransitionInfo>
+														</MusicTransition>
+													</ChildrenList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{741B8C3C-0707-4381-A273-983BCF1F2F07}">
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Negative2" ID="{7B8148F7-9F86-4EFE-94D8-328557B84FCB}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+												<MusicTrackSequence Name="" ID="{E14DF138-E6B8-4486-9663-97842F8D3B17}">
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Negative2" ID="{7B8148F7-9F86-4EFE-94D8-328557B84FCB}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+												<MusicTrackSequence Name="" ID="{794F4596-8DE1-45D8-A25B-B758A7BF97BB}">
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Negative2" ID="{7B8148F7-9F86-4EFE-94D8-328557B84FCB}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+										<MusicTrack Name="Sberg_chords_4bars" ID="{4539BE73-E3B2-4D3B-9686-EDEC4E315E62}" ShortID="186724602">
+											<PropertyList>
+												<Property Name="MusicTrackType" Type="int16" Value="3"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{915B61B1-18DF-4962-AED9-7E215C7469A8}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="Valence" ID="{30F20821-4533-4824-9204-CD28D234F3F0}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Sberg_chords_4bars_neutral_Cis_1" ID="{0B8B0796-648C-4031-94D8-9690D254826D}" ShortID="439132987">
+													<Language>SFX</Language>
+													<AudioFile>Sberg_chords_4bars_neutral_Cis_1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{7870D857-3F1A-4347-8225-8B09562B8E87}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<ChildrenList>
+														<MusicTransition Name="Transition" ID="{AA9F7E4C-E0D8-433B-AF4F-4EBE0F51AD05}">
+															<PropertyList>
+																<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+															</PropertyList>
+															<TransitionInfo>
+																<SourceFadeOut>
+																	<MusicFade Name="Source Fade-out" ID="{29872E03-4099-4F1A-8CE4-B7836048C098}">
+																		<PropertyList>
+																			<Property Name="FadeTime" Type="Real64" Value="1"/>
+																			<Property Name="FadeType" Type="int16" Value="1"/>
+																		</PropertyList>
+																	</MusicFade>
+																</SourceFadeOut>
+															</TransitionInfo>
+														</MusicTransition>
+													</ChildrenList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{8D576097-C2E8-4BFA-887A-2584BDF2FFF9}">
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Positive1" ID="{9ADE10CB-BFC2-4589-AED9-FF0FB0DE6064}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+												<MusicTrackSequence Name="" ID="{C5F5B4BD-E015-4554-B86A-E09FE2D5D441}">
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Positive2" ID="{E72CF725-5E14-4A1C-BEB1-895CE5BE678D}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+												<MusicTrackSequence Name="" ID="{51EEDBDC-E2A5-459F-BD4F-A7A5EC72283B}">
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Positive3" ID="{A5C726AC-AEDB-4F04-89D7-76AACF9FEB43}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+												<MusicTrackSequence Name="" ID="{FA5CDA30-B014-4217-A09E-59074CD6BCDC}">
+													<ClipList>
+														<MusicClip Name="Sberg_chords_4bars_neutral_Cis_1" ID="{EE449AF0-55C9-4A0C-B96F-2CD1E84DACEE}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="21818.1875"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Sberg_chords_4bars_neutral_Cis_1" ID="{0B8B0796-648C-4031-94D8-9690D254826D}"/>
+														</MusicClip>
+													</ClipList>
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Neutral" ID="{86829211-944F-43AF-B222-EE694E5A52F8}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+												<MusicTrackSequence Name="" ID="{6E0BAA88-020F-42ED-B974-4B245C1B3D7A}">
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Negative1" ID="{CEC956F8-0F39-413C-99CE-0DE148EB238E}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+												<MusicTrackSequence Name="" ID="{E806098C-FCAA-4147-A89B-8CD0FA9B8283}">
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Negative2" ID="{7B8148F7-9F86-4EFE-94D8-328557B84FCB}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+												<MusicTrackSequence Name="" ID="{11D532CC-0B68-448C-A89D-B845E6CC96D2}">
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Negative3" ID="{5A893E9C-E601-419A-9EA0-3ECB42A0C7F0}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+										<MusicTrack Name="Sberg_strings_4bars_tremolo" ID="{250878BA-4FA6-414C-BD6A-76C8A2221F2E}" ShortID="875659876">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{CCA553E4-94BC-4234-BA49-BC88FEABF61F}" ShortID="910944348">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="ValenceLevel" ID="{EEA5220B-08C9-460F-ADFF-810AFF75B7C9}" WorkUnitID="{66F9F794-BB22-49DF-915F-348F8312E0FE}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{3DDE96CB-42E9-4548-ACD0-BF89131B4D86}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-4.77111</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>21.79054</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{915B61B1-18DF-4962-AED9-7E215C7469A8}"/>
+												</Reference>
+												<Reference Name="SwitchGroupOrStateGroup">
+													<ObjectRef Name="Valence" ID="{30F20821-4533-4824-9204-CD28D234F3F0}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+												</Reference>
+											</ReferenceList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{AEE432CF-EFDF-4184-A164-54C09411F27C}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<ChildrenList>
+														<MusicTransition Name="Transition" ID="{3D746968-B10A-4F36-BFE2-29ADCEF51A2C}">
+															<PropertyList>
+																<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+																<Property Name="ExitSourceAt" Type="int16" Value="2"/>
+															</PropertyList>
+															<TransitionInfo>
+																<SourceFadeOut>
+																	<MusicFade Name="Source Fade-out" ID="{36637645-0B2B-4B1C-9A61-BB722490D68B}">
+																		<PropertyList>
+																			<Property Name="FadeOffset" Type="Real64" Value="0.9"/>
+																			<Property Name="FadeTime" Type="Real64" Value="2"/>
+																			<Property Name="FadeType" Type="int16" Value="1"/>
+																		</PropertyList>
+																	</MusicFade>
+																</SourceFadeOut>
+															</TransitionInfo>
+														</MusicTransition>
+													</ChildrenList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{B445E55D-48AA-4A32-9D09-6E745D1132B1}">
+													<ReferenceList>
+														<Reference Name="TrackSequenceSwitch">
+															<ObjectRef Name="Negative3" ID="{5A893E9C-E601-419A-9EA0-3ECB42A0C7F0}" WorkUnitID="{A4AFC472-8CC5-4FAB-A12D-23335FAC9944}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+										<MusicTrack Name="Sberg_strings_major_positive" ID="{4B34C3C8-0F19-4823-846E-4638576A53FF}" ShortID="969889949">
+											<PropertyList>
+												<Property Name="OverrideEffect" Type="bool" Value="True"/>
+												<Property Name="Volume" Type="Real64">
+													<RTPCList>
+														<RTPC Name="" ID="{2D95050C-37D4-46BB-A77F-FE4FF285E967}" ShortID="738967253">
+															<ReferenceList>
+																<Reference Name="ControlInput">
+																	<ObjectRef Name="ValenceLevel" ID="{EEA5220B-08C9-460F-ADFF-810AFF75B7C9}" WorkUnitID="{66F9F794-BB22-49DF-915F-348F8312E0FE}"/>
+																</Reference>
+															</ReferenceList>
+															<Curve Name="" ID="{8A3EC876-EEB5-4957-A478-2A804FBBE728}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>67.22973</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>86.65541</XPos>
+																		<YPos>-5.81313</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>-3.67289</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</RTPC>
+													</RTPCList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Effect0" CompanyID="4095" PluginID="65535" PluginType="15">
+													<ObjectRef Name="Bass_Remover_4" ID="{F641E9BC-59FE-4DDD-B162-B5377EF599C2}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{915B61B1-18DF-4962-AED9-7E215C7469A8}"/>
+												</Reference>
+											</ReferenceList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{8460CF50-C66E-46E3-96F0-7FECDE023337}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{73857ECF-B141-4015-A17D-9DBC4A130615}"/>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{163D7AC7-487A-4916-AF5B-DE7912951381}"/>
+										<MusicCue Name="Exit Cue" ID="{AE805AF2-A151-40D7-90D2-7B98BAC4E562}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="17454.5454545455"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+							</ChildrenList>
+							<TransitionList>
+								<MusicTransition Name="Root" ID="{1310BC9E-875F-41FE-847A-3C0BBE2D05FD}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{6019D4A9-24C1-42CF-8D0A-52584F569846}">
+											<TransitionInfo/>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</TransitionList>
+							<Playlist>
+								<MusicPlaylistItem Name="" ID="{162B0C99-DB0C-4128-A396-DE8A5D831B2D}" ShortID="633333835">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{6AACA39E-5DF5-4CE9-B22C-6E51DDE6E336}" ShortID="962945754">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{2962D885-8BE2-4B5F-8F1A-7183AD642A36}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="1"/>
+																	<Property Name="Min" Type="Real64" Value="-1"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Schonberg-style C" ID="{A357E2D0-16B0-4A00-AE9C-556342C62357}"/>
+										</MusicPlaylistItem>
+										<MusicPlaylistItem Name="" ID="{E5270CF0-5810-4227-87AF-3375C9579D97}" ShortID="61044945">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Schonberg-style Cis" ID="{D5868605-392F-411E-BB71-C1E22345E4AC}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
+							</Playlist>
+						</MusicPlaylistContainer>
+					</ChildrenList>
+					<TransitionList>
+						<MusicTransition Name="Root" ID="{1FE9BB52-2EE9-4C95-9237-2BEE13B2264E}">
+							<PropertyList>
+								<Property Name="IsFolder" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<MusicTransition Name="Transition" ID="{3DE10A04-040A-4055-B9D1-43EAB32E5918}">
+									<TransitionInfo/>
+								</MusicTransition>
+							</ChildrenList>
+							<TransitionInfo/>
+						</MusicTransition>
+					</TransitionList>
+					<ArgumentList>
+						<ArgumentRef Name="Sequence" ID="{71347AA5-E664-4E6D-8B60-B43CCE462F1E}"/>
+					</ArgumentList>
+					<EntryList>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Hypnosis" ID="{E546E427-3F37-41A1-904E-F90E22419519}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Interactive_Music" ID="{E47BA677-0374-4E5E-A748-D06EEE183349}" WorkUnitID="{F0D9E8B3-300F-4782-B1B2-BE13E6C3CEB8}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+					</EntryList>
+				</MusicSwitchContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</InteractiveMusic>
+</WwiseDocument>
