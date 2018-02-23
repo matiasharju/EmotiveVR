@@ -27,13 +27,20 @@
 							<Language>SFX</Language>
 							<AudioFile>Freud_2F1T07_DEMO_ambiX_2nd_order_9ch.wav</AudioFile>
 						</AudioFileSource>
+						<AudioFileSource Name="Freud_2-F1-7_PREMIX_Unity" ID="{9963D92C-0342-4486-A83C-903FCA302EBB}" ShortID="152024896">
+							<PropertyList>
+								<Property Name="ChannelConfigOverride" Type="int64" Value="521"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Freud_2-F1-7_PREMIX_Unity.wav</AudioFile>
+						</AudioFileSource>
 					</ChildrenList>
 					<PositioningInfo>
 						<Panner Name="" ID="{B89F6E00-14A3-415B-A391-CC501747B9FD}"/>
 						<Position Name="" ID="{E31FCED1-F9E6-436D-AC3B-F3B7BD34568A}"/>
 					</PositioningInfo>
 					<ActiveSourceList>
-						<ActiveSource Name="Freud_2F1T07_DEMO_ambiX_2nd_order_9ch" ID="{189396D6-A62F-4DB9-83E2-F678A137E9B1}" Platform="Linked"/>
+						<ActiveSource Name="Freud_2-F1-7_PREMIX_Unity" ID="{9963D92C-0342-4486-A83C-903FCA302EBB}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>
