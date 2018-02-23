@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e95eaef8908f4720896d2c14d14d50a, type: 3}
-  m_Name: AkWwiseProjectData
+  m_Name: AkWwiseProjectData 1
   m_EditorClassIdentifier: 
   CurrentPluginConfig: 
   EventWwu:
@@ -42,7 +42,7 @@ MonoBehaviour:
       Guid: a903f491f9234a4ba2619e283d56fba0
       minDuration: 0
       maxDuration: 0
-      maxAttenuation: 100
+      maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -210,14 +210,11 @@ MonoBehaviour:
     m_lastTimePsrt1: 2111724046
     m_lastTimePart2: -1999275365
     List: []
-  ExpandedItems:
-  - /EmotiveVR_WWise
-  - /EmotiveVR_WWise/Events
-  - /EmotiveVR_WWise/Events/Default Work Unit
+  ExpandedItems: []
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
-  basePath: Audio/GeneratedSoundBanks
+  basePath: Audio\GeneratedSoundBanks
   language: English(US)
   defaultPoolSize: 4096
   lowerPoolSize: 2048
