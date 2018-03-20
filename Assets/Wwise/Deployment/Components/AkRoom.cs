@@ -1,146 +1,143 @@
 #if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.
-﻿using UnityEngine;
-using System.Collections.Generic;
-
-[AddComponentMenu("Wwise/AkRoom")]
-[RequireComponent(typeof(Collider))]
-[DisallowMultipleComponent]
+[UnityEngine.AddComponentMenu("Wwise/AkRoom")]
+[UnityEngine.RequireComponent(typeof(UnityEngine.Collider))]
+[UnityEngine.DisallowMultipleComponent]
 /// @brief An AkRoom is an enclosed environment that can only communicate to the outside/other rooms with AkRoomPortals
 /// @details 
-public class AkRoom : MonoBehaviour
+public class AkRoom : UnityEngine.MonoBehaviour
 {
-    public class PriorityList
-    {
-        /// Contains all active rooms sorted by priority.
-        public List<AkRoom> rooms = new List<AkRoom>();
+	public static ulong INVALID_ROOM_ID = unchecked((ulong) -1.0f);
 
-        private class CompareByPriority : IComparer<AkRoom>
-        {
-            public virtual int Compare(AkRoom a, AkRoom b)
-            {
-                int result = a.priority.CompareTo(b.priority);
+	private static int RoomCount;
 
-                if (result == 0 && a != b)
-                    return 1;
-                else
-                    return -result; // inverted to have highest priority first
-            }
-        }
+	[UnityEngine.Tooltip("Higher number has a higher priority")]
+	/// In cases where a game object is in an area with two rooms, the higher priority room will be chosen for AK::SpatialAudio::SetGameObjectInRoom()
+	/// The higher the priority number, the higher the priority of a room.
+	public int priority = 0;
 
-        private static CompareByPriority s_compareByPriority = new CompareByPriority();
+	/// The reverb auxiliary bus.
+	public AK.Wwise.AuxBus reverbAuxBus;
 
-        public ulong GetHighestPriorityRoomID()
-        {
-            var room = GetHighestPriorityRoom();
-            return (room == null) ? AkRoom.INVALID_ROOM_ID : room.GetID();
-        }
+	[UnityEngine.Range(0, 1)]
+	/// The reverb control value for the send to the reverb aux bus.
+	public float reverbLevel = 1;
 
-        public AkRoom GetHighestPriorityRoom()
-        {
-            if (rooms.Count == 0)
-            {
-                // we're outside
-                return null;
-            }
+	[UnityEngine.Range(0, 1)]
+	/// Occlusion level modeling transmission through walls.
+	public float wallOcclusion = 1;
 
-            return rooms[0];
-        }
+	public static bool IsSpatialAudioEnabled
+	{
+		get { return AkSpatialAudioListener.TheSpatialAudioListener != null && RoomCount > 0; }
+	}
 
-        public void Add(AkRoom room)
-        {
-            int index = BinarySearch(room);
-            if (index < 0)
-                rooms.Insert(~index, room);
-        }
+	/// Access the room's ID
+	public ulong GetID()
+	{
+		return (ulong) GetInstanceID();
+	}
 
-        public void Remove(AkRoom room)
-        {
-            rooms.Remove(room);
-        }
+	private void OnEnable()
+	{
+		var roomParams = new AkRoomParams();
 
-        public bool Contains(AkRoom room)
-        {
-            return BinarySearch(room) >= 0;
-        }
+		roomParams.Up.X = transform.up.x;
+		roomParams.Up.Y = transform.up.y;
+		roomParams.Up.Z = transform.up.z;
 
-        public int BinarySearch(AkRoom room)
-        {
-            return rooms.BinarySearch(room, s_compareByPriority);
-        }
-    }
+		roomParams.Front.X = transform.forward.x;
+		roomParams.Front.Y = transform.forward.y;
+		roomParams.Front.Z = transform.forward.z;
 
-    static public ulong INVALID_ROOM_ID = unchecked((ulong)-1.0f);
+		roomParams.ReverbAuxBus = (uint) reverbAuxBus.ID;
+		roomParams.ReverbLevel = reverbLevel;
+		roomParams.WallOcclusion = wallOcclusion;
 
-    /// The reverb auxiliary bus.
-    public AK.Wwise.AuxBus reverbAuxBus;
+		RoomCount++;
+		AkSoundEngine.SetRoom(GetID(), roomParams, name);
+	}
 
-    [Range(0, 1)]
-    /// The reverb control value for the send to the reverb aux bus.
-    public float reverbLevel = 1;
+	private void OnDisable()
+	{
+		RoomCount--;
+		AkSoundEngine.RemoveRoom(GetID());
+	}
 
-    [Range(0, 1)]
-    /// Occlusion level modeling transmission through walls.
-    public float wallOcclusion = 1;
+	private void OnTriggerEnter(UnityEngine.Collider in_other)
+	{
+		var spatialAudioObjects = in_other.GetComponentsInChildren<AkSpatialAudioBase>();
+		for (var i = 0; i < spatialAudioObjects.Length; i++)
+		{
+			if (spatialAudioObjects[i].enabled)
+				spatialAudioObjects[i].EnteredRoom(this);
+		}
+	}
 
-    [Tooltip("Higher number has a higher priority")]
-    /// In cases where a game object is in an area with two rooms, the higher priority room will be chosen for AK::SpatialAudio::SetGameObjectInRoom()
-    /// The higher the priority number, the higher the priority of a room.
-    public int priority = 0;
+	private void OnTriggerExit(UnityEngine.Collider in_other)
+	{
+		var spatialAudioObjects = in_other.GetComponentsInChildren<AkSpatialAudioBase>();
+		for (var i = 0; i < spatialAudioObjects.Length; i++)
+		{
+			if (spatialAudioObjects[i].enabled)
+				spatialAudioObjects[i].ExitedRoom(this);
+		}
+	}
 
-    /// Access the room's ID
-    public ulong GetID() { return (ulong)GetInstanceID(); }
+	public class PriorityList
+	{
+		private static readonly CompareByPriority s_compareByPriority = new CompareByPriority();
 
-    private void OnEnable()
-    {
-        AkRoomParams roomParams = new AkRoomParams();
+		/// Contains all active rooms sorted by priority.
+		public System.Collections.Generic.List<AkRoom> rooms = new System.Collections.Generic.List<AkRoom>();
 
-        roomParams.Up.X = transform.up.x;
-        roomParams.Up.Y = transform.up.y;
-        roomParams.Up.Z = transform.up.z;
+		public ulong GetHighestPriorityRoomID()
+		{
+			var room = GetHighestPriorityRoom();
+			return room == null ? INVALID_ROOM_ID : room.GetID();
+		}
 
-        roomParams.Front.X = transform.forward.x;
-        roomParams.Front.Y = transform.forward.y;
-        roomParams.Front.Z = transform.forward.z;
+		public AkRoom GetHighestPriorityRoom()
+		{
+			if (rooms.Count == 0)
+				return null;
 
-        roomParams.ReverbAuxBus = (uint)reverbAuxBus.ID;
-        roomParams.ReverbLevel = reverbLevel;
-        roomParams.WallOcclusion = wallOcclusion;
+			return rooms[0];
+		}
 
-        RoomCount++;
-        AkSoundEngine.SetRoom(GetID(), roomParams, name);
-    }
+		public void Add(AkRoom room)
+		{
+			var index = BinarySearch(room);
+			if (index < 0)
+				rooms.Insert(~index, room);
+		}
 
-    private void OnDisable()
-    {
-        RoomCount--;
-        AkSoundEngine.RemoveRoom(GetID());
-    }
+		public void Remove(AkRoom room)
+		{
+			rooms.Remove(room);
+		}
 
-    void OnTriggerEnter(Collider in_other)
-    {
-        var spatialAudioObjects = in_other.GetComponentsInChildren<AkSpatialAudioBase>();
-        for(int i = 0; i < spatialAudioObjects.Length; i++)
-        {
-            if (spatialAudioObjects[i].enabled)
-                spatialAudioObjects[i].EnteredRoom(this);
-        }
-    }
+		public bool Contains(AkRoom room)
+		{
+			return BinarySearch(room) >= 0;
+		}
 
-    void OnTriggerExit(Collider in_other)
-    {
-        var spatialAudioObjects = in_other.GetComponentsInChildren<AkSpatialAudioBase>();
-        for (int i = 0; i < spatialAudioObjects.Length; i++)
-        {
-            if (spatialAudioObjects[i].enabled)
-                spatialAudioObjects[i].ExitedRoom(this);
-        }
-    }
+		public int BinarySearch(AkRoom room)
+		{
+			return rooms.BinarySearch(room, s_compareByPriority);
+		}
 
-    static int RoomCount = 0;
+		private class CompareByPriority : System.Collections.Generic.IComparer<AkRoom>
+		{
+			public virtual int Compare(AkRoom a, AkRoom b)
+			{
+				var result = a.priority.CompareTo(b.priority);
 
-    public static bool IsSpatialAudioEnabled
-    {
-        get { return (AkSpatialAudioListener.TheSpatialAudioListener != null) && (RoomCount > 0); }
-    }
+				if (result == 0 && a != b)
+					return 1;
+
+				return -result; // inverted to have highest priority first
+			}
+		}
+	}
 }
 #endif // #if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.

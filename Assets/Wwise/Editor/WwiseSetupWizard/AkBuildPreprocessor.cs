@@ -1,73 +1,73 @@
 ﻿#if UNITY_EDITOR && UNITY_5_6_OR_NEWER
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor;
-using UnityEditor.Build;
-#if UNITY_2018_1_OR_NEWER
-using UnityEditor.Build.Reporting;
-#endif
-
-public partial class AkBuildPreprocessor : IPreprocessBuild, IPostprocessBuild
+public partial class AkBuildPreprocessor
 {
 	/// <summary>
-	/// User hook called to retrieve the custom platform name used to determine the base path. Do not modify platformName to use default platform names.
+	///     User hook called to retrieve the custom platform name used to determine the base path. Do not modify platformName
+	///     to use default platform names.
 	/// </summary>
 	/// <param name="platformName">The custom platform name.</param>
-	static partial void GetCustomPlatformName(ref string platformName, BuildTarget target);
+	static partial void GetCustomPlatformName(ref string platformName, UnityEditor.BuildTarget target);
 
-	private static string GetPlatformName(BuildTarget target)
+	private static string GetPlatformName(UnityEditor.BuildTarget target)
 	{
-		string platformSubDir = string.Empty;
+		var platformSubDir = string.Empty;
 		GetCustomPlatformName(ref platformSubDir, target);
 		if (!string.IsNullOrEmpty(platformSubDir))
 			return platformSubDir;
 
 		switch (target)
 		{
-			case BuildTarget.Android:
+			case UnityEditor.BuildTarget.Android:
 				return "Android";
 
-			case BuildTarget.iOS:
-			case BuildTarget.tvOS:
+			case UnityEditor.BuildTarget.iOS:
+			case UnityEditor.BuildTarget.tvOS:
 				return "iOS";
 
-			case BuildTarget.StandaloneLinux:
-			case BuildTarget.StandaloneLinux64:
-			case BuildTarget.StandaloneLinuxUniversal:
+			case UnityEditor.BuildTarget.StandaloneLinux:
+			case UnityEditor.BuildTarget.StandaloneLinux64:
+			case UnityEditor.BuildTarget.StandaloneLinuxUniversal:
 				return "Linux";
 
 #if UNITY_2017_3_OR_NEWER
-            case BuildTarget.StandaloneOSX:
+			case UnityEditor.BuildTarget.StandaloneOSX:
 #else
-            case BuildTarget.StandaloneOSXIntel:
-			case BuildTarget.StandaloneOSXIntel64:
-			case BuildTarget.StandaloneOSXUniversal:
+			case UnityEditor.BuildTarget.StandaloneOSXIntel:
+			case UnityEditor.BuildTarget.StandaloneOSXIntel64:
+			case UnityEditor.BuildTarget.StandaloneOSXUniversal:
 #endif
-                return "Mac";
+				return "Mac";
 
-			case BuildTarget.PS4:
+			case UnityEditor.BuildTarget.PS4:
 				return "PS4";
 
-			case BuildTarget.PSP2:
+			case UnityEditor.BuildTarget.PSP2:
 				return "Vita";
 
-			case BuildTarget.StandaloneWindows:
-			case BuildTarget.StandaloneWindows64:
-			case BuildTarget.WSAPlayer:
+			case UnityEditor.BuildTarget.StandaloneWindows:
+			case UnityEditor.BuildTarget.StandaloneWindows64:
+			case UnityEditor.BuildTarget.WSAPlayer:
 				return "Windows";
 
-			case BuildTarget.XboxOne:
+			case UnityEditor.BuildTarget.XboxOne:
 				return "XboxOne";
 
-			case BuildTarget.Switch:
+			case UnityEditor.BuildTarget.Switch:
 				return "Switch";
 		}
 
 		return target.ToString();
 	}
+}
 
-	public int callbackOrder { get { return 0; } }
-	string destinationSoundBankFolder = string.Empty;
+public partial class AkBuildPreprocessor : UnityEditor.Build.IPreprocessBuild, UnityEditor.Build.IPostprocessBuild
+{
+	public int callbackOrder
+	{
+		get { return 0; }
+	}
+
+	private string destinationSoundBankFolder = string.Empty;
 
 	private static bool SetDestinationPath(string platformName, ref string destinationFolder)
 	{
@@ -78,34 +78,32 @@ public partial class AkBuildPreprocessor : IPreprocessBuild, IPostprocessBuild
 	public static bool CopySoundbanks(bool generate, string platformName, ref string destinationFolder)
 	{
 		if (string.IsNullOrEmpty(platformName))
-		{
-			Debug.LogError("WwiseUnity: Could not determine platform name for <" + platformName + "> platform");
-		}
+			UnityEngine.Debug.LogError("WwiseUnity: Could not determine platform name for <" + platformName + "> platform");
 		else
 		{
 			if (generate)
 			{
-				List<string> platforms = new List<string> { platformName };
+				var platforms = new System.Collections.Generic.List<string> { platformName };
 				AkUtilities.GenerateSoundbanks(platforms);
 			}
 
-			string sourceFolder = AkBasePathGetter.GetPlatformBasePathEditor(platformName);
+			var sourceFolder = AkBasePathGetter.GetPlatformBasePathEditor(platformName);
 			if (string.IsNullOrEmpty(sourceFolder))
 			{
-				Debug.LogError("WwiseUnity: Could not find source folder for <" + platformName + "> platform. Did you remember to generate your banks?");
+				UnityEngine.Debug.LogError("WwiseUnity: Could not find source folder for <" + platformName +
+				                           "> platform. Did you remember to generate your banks?");
 			}
 			else if (!SetDestinationPath(platformName, ref destinationFolder))
-			{
-				Debug.LogError("WwiseUnity: Could not find destination folder for <" + platformName + "> platform");
-			}
+				UnityEngine.Debug.LogError("WwiseUnity: Could not find destination folder for <" + platformName + "> platform");
 			else if (!AkUtilities.DirectoryCopy(sourceFolder, destinationFolder, true))
 			{
 				destinationFolder = null;
-				Debug.LogError("WwiseUnity: Could not copy soundbank folder for <" + platformName + "> platform");
+				UnityEngine.Debug.LogError("WwiseUnity: Could not copy soundbank folder for <" + platformName + "> platform");
 			}
 			else
 			{
-				Debug.Log("WwiseUnity: Copied soundbank folder to streaming assets folder <" + destinationFolder + "> for <" + platformName + "> platform build");
+				UnityEngine.Debug.Log("WwiseUnity: Copied soundbank folder to streaming assets folder <" + destinationFolder +
+				                      "> for <" + platformName + "> platform build");
 				return true;
 			}
 		}
@@ -115,29 +113,23 @@ public partial class AkBuildPreprocessor : IPreprocessBuild, IPostprocessBuild
 
 	public static void DeleteSoundbanks(string destinationFolder)
 	{
-		if (!string.IsNullOrEmpty(destinationFolder))
-		{
-			System.IO.Directory.Delete(destinationFolder, true);
-			Debug.Log("WwiseUnity: Deleting streaming assets folder <" + destinationFolder + ">");
-		}
+		if (string.IsNullOrEmpty(destinationFolder))
+			return;
+
+		System.IO.Directory.Delete(destinationFolder, true);
+		UnityEngine.Debug.Log("WwiseUnity: Deleting streaming assets folder <" + destinationFolder + ">");
 	}
 
-
-#if UNITY_2018_1_OR_NEWER
-    public void OnPreprocessBuild(BuildReport report)
-    {
-        BuildTarget target = report.summary.platform;
-        string path = report.summary.outputPath;
-#else
-    public void OnPreprocessBuild(BuildTarget target, string path)
+	public void OnPreprocessBuildInternal(UnityEditor.BuildTarget target, string path)
 	{
-#endif
 		if (WwiseSetupWizard.Settings.CopySoundBanksAsPreBuildStep)
 		{
-			string platformName = GetPlatformName(target);
-			if (!CopySoundbanks(WwiseSetupWizard.Settings.GenerateSoundBanksAsPreBuildStep, platformName, ref destinationSoundBankFolder))
+			var platformName = GetPlatformName(target);
+			if (!CopySoundbanks(WwiseSetupWizard.Settings.GenerateSoundBanksAsPreBuildStep, platformName,
+				ref destinationSoundBankFolder))
 			{
-				Debug.LogError("WwiseUnity: Soundbank folder has not been copied for <" + target + "> target at <" + path + ">. This will likely result in a build without sound!!!");
+				UnityEngine.Debug.LogError("WwiseUnity: Soundbank folder has not been copied for <" + target + "> target at <" +
+				                           path + ">. This will likely result in a build without sound!!!");
 			}
 		}
 
@@ -146,18 +138,33 @@ public partial class AkBuildPreprocessor : IPreprocessBuild, IPostprocessBuild
 		AkPluginActivator.ActivatePluginsForDeployment(target, true);
 	}
 
-#if UNITY_2018_1_OR_NEWER
-    public void OnPostprocessBuild(BuildReport report)
-    {
-        BuildTarget target = report.summary.platform;
-#else
-    public void OnPostprocessBuild(BuildTarget target, string path)
+	public void OnPostprocessBuildInternal(UnityEditor.BuildTarget target, string path)
 	{
-#endif
 		AkPluginActivator.ActivatePluginsForDeployment(target, false);
 		DeleteSoundbanks(destinationSoundBankFolder);
 		destinationSoundBankFolder = string.Empty;
 	}
 
+#if UNITY_2018_1_OR_NEWER
+	public void OnPreprocessBuild(UnityEditor.Build.Reporting.BuildReport report)
+	{
+		OnPreprocessBuildInternal(report.summary.platform, report.summary.outputPath);
+	}
+
+	public void OnPostprocessBuild(UnityEditor.Build.Reporting.BuildReport report)
+	{
+		OnPostprocessBuildInternal(report.summary.platform, report.summary.outputPath);
+	}
+#else
+	public void OnPreprocessBuild(UnityEditor.BuildTarget target, string path)
+	{
+		OnPreprocessBuildInternal(target, path);
+	}
+
+	public void OnPostprocessBuild(UnityEditor.BuildTarget target, string path)
+	{
+		OnPostprocessBuildInternal(target, path);
+	}
+#endif
 }
 #endif // #if UNITY_EDITOR && UNITY_5_6_OR_NEWER

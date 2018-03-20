@@ -13,8 +13,11 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID INTERACTIVE_MUSIC_2 = 3176468840U;
         static const AkUniqueID INTERACTIVEMUSIC = 2279279248U;
-        static const AkUniqueID VIDEOAUDIO = 1707179908U;
+        static const AkUniqueID PLAYBEEP = 3043762247U;
+        static const AkUniqueID PLAYFREUDAUDIO = 1437163987U;
+        static const AkUniqueID STARTVIDEOSOUND = 667812177U;
     } // namespace EVENTS
 
     namespace STATES
@@ -67,6 +70,7 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID CRAZYLEVEL = 582204082U;
+        static const AkUniqueID HEAD_DIRECTION = 367846241U;
         static const AkUniqueID VALENCELEVEL = 2275494527U;
     } // namespace GAME_PARAMETERS
 
@@ -83,6 +87,11 @@ namespace AK
         static const AkUniqueID MASTER_SECONDARY_BUS = 805203703U;
         static const AkUniqueID MUSIC_BUS = 3127962312U;
     } // namespace BUSSES
+
+    namespace AUX_BUSSES
+    {
+        static const AkUniqueID MUSIC_REVERB = 2450185101U;
+    } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
     {

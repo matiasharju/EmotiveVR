@@ -5,16 +5,14 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-using UnityEngine;
-using UnityEditor;
-using System;
-
-[CustomEditor(typeof(AkSpatialAudioListener))]
-public class AkSpatialAudioListenerInspector : Editor
+[UnityEditor.CustomEditor(typeof(AkSpatialAudioListener))]
+public class AkSpatialAudioListenerInspector : UnityEditor.Editor
 {
-    public override void OnInspectorGUI()
-    {
-        EditorGUILayout.HelpBox("The current version of Spatial Audio only supports one listener. Make sure to only have one AkSpatialAudioListener active at a time.", MessageType.Info);
-    }
+	public override void OnInspectorGUI()
+	{
+		UnityEditor.EditorGUILayout.HelpBox(
+			"The current version of Spatial Audio only supports one listener. Make sure to only have one AkSpatialAudioListener active at a time.",
+			UnityEditor.MessageType.Info);
+	}
 }
 #endif

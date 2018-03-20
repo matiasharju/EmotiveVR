@@ -5,64 +5,57 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-using System;
-
-
-
 public class AkWwiseXMLWatcher
 {
-	private System.IO.FileSystemWatcher XmlWatcher;
-	private string SoundBankFolder;
-	
-	private static AkWwiseXMLWatcher Instance = null;
-	
-	public static AkWwiseXMLWatcher GetInstance()
-	{
-		if (Instance == null)
-		{
-			Instance = new AkWwiseXMLWatcher ();
-		}
-		
-		return Instance;
-	}
-	
-	
+	private static AkWwiseXMLWatcher Instance;
+	private readonly string SoundBankFolder;
+	private readonly System.IO.FileSystemWatcher XmlWatcher;
+
+
 	private AkWwiseXMLWatcher()
 	{
-		XmlWatcher 			= new System.IO.FileSystemWatcher ();
-		SoundBankFolder 	= AkBasePathGetter.GetSoundbankBasePath();
-		
+		XmlWatcher = new System.IO.FileSystemWatcher();
+		SoundBankFolder = AkBasePathGetter.GetSoundbankBasePath();
+
 		try
 		{
 			XmlWatcher.Path = SoundBankFolder;
-			XmlWatcher.NotifyFilter = System.IO.NotifyFilters.LastWrite; 
-			
+			XmlWatcher.NotifyFilter = System.IO.NotifyFilters.LastWrite;
+
 			// Event handlers that are watching for specific event
-			XmlWatcher.Created += new System.IO.FileSystemEventHandler(RaisePopulateFlag);
-			XmlWatcher.Changed += new System.IO.FileSystemEventHandler(RaisePopulateFlag);
-			
+			XmlWatcher.Created += RaisePopulateFlag;
+			XmlWatcher.Changed += RaisePopulateFlag;
+
 			XmlWatcher.Filter = "*.xml";
 			XmlWatcher.IncludeSubdirectories = true;
 		}
-		catch( Exception )
+		catch (System.Exception)
 		{
 			// Deliberately left empty
 		}
 	}
-	
+
+	public static AkWwiseXMLWatcher GetInstance()
+	{
+		if (Instance == null)
+			Instance = new AkWwiseXMLWatcher();
+
+		return Instance;
+	}
+
 	public void StartXMLWatcher()
 	{
-		XmlWatcher.EnableRaisingEvents = true; 
+		XmlWatcher.EnableRaisingEvents = true;
 	}
-	
+
 	public void StopXMLWatcher()
 	{
 		XmlWatcher.EnableRaisingEvents = false;
 	}
 
-	
-	void RaisePopulateFlag(object sender, System.IO.FileSystemEventArgs e)
-	{	
+
+	private void RaisePopulateFlag(object sender, System.IO.FileSystemEventArgs e)
+	{
 		// Signal the main thread it's time to populate (cannot run populate somewhere else than on main thread)
 		AkAmbientInspector.populateSoundBank = true;
 	}

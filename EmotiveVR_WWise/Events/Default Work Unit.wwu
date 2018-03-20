@@ -27,16 +27,77 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="VideoAudio" ID="{91F403A9-23F9-4B4A-A261-9E283D56FBA0}">
+				<Event Name="Interactive_Music_2" ID="{4E5A499E-2888-49DC-AA8A-977929879A7F}">
 					<ChildrenList>
-						<Action Name="" ID="{A40FAAB6-D29D-4E1A-BB41-32E34111CCAF}" ShortID="182858763">
+						<Action Name="" ID="{06755C62-C1CA-4144-8D25-846075DFC4FC}" ShortID="15231338">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="1"/>
-								<Property Name="Delay" Type="Real64" Value="0.7"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Freud_2F1T07_DEMO_ambiX_2nd_order_9ch" ID="{7CCA873C-F81E-442F-AEF7-204661685C1A}" WorkUnitID="{7011B163-7DEB-4017-B5E0-DAF3F1916B50}"/>
+									<ObjectRef Name="Chord Randomiser" ID="{7B03682C-AFCD-4DAC-8547-6ADAC0C7D7EA}" WorkUnitID="{F0D9E8B3-300F-4782-B1B2-BE13E6C3CEB8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4B4940D9-B905-482E-A868-20CDA9C45542}" ShortID="164259968">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Bass Player" ID="{47848362-224E-409C-933E-F296AB27902E}" WorkUnitID="{F0D9E8B3-300F-4782-B1B2-BE13E6C3CEB8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="StartVideoSound" ID="{5927E3E9-7344-4EF7-BCE6-2DFABB6F268D}">
+					<ChildrenList>
+						<Action Name="" ID="{E8350FFC-2E05-4585-B584-6740B4F76F46}" ShortID="249308238">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Noise" ID="{6808C086-3D89-4E62-B011-4C9FAA42EEAA}" WorkUnitID="{7011B163-7DEB-4017-B5E0-DAF3F1916B50}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="PlayBeep" ID="{349D24D4-7EF9-4261-B8CA-86C4391B609F}">
+					<ChildrenList>
+						<Action Name="" ID="{C161EC3C-BC39-47D3-A66C-672B52C02E04}" ShortID="407615312">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Beep" ID="{1800EA58-97A1-4AAE-817E-97AB4462DB77}" WorkUnitID="{7011B163-7DEB-4017-B5E0-DAF3F1916B50}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="PlayFreudAudio" ID="{C2DECE52-7A19-4ECB-B12C-E98DAC5A7753}">
+					<ChildrenList>
+						<Action Name="" ID="{4B3ACA28-6B49-4C0A-B1E9-CB8E504F2A7F}" ShortID="243029070">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Freud_TEST_Ambisonic" ID="{9E247B34-5C60-49FF-B17E-72229ED5FDAF}" WorkUnitID="{7011B163-7DEB-4017-B5E0-DAF3F1916B50}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{32D0E0FA-82FB-4033-974E-001F07D63AD3}" ShortID="720939979">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Freud_TEST_Headlocked" ID="{6DB58FB9-5D88-430B-BAFC-F6308FB71B1B}" WorkUnitID="{7011B163-7DEB-4017-B5E0-DAF3F1916B50}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

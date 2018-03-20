@@ -5,23 +5,19 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-using UnityEngine;
-using UnityEditor;
-using System;
-
-[CustomEditor(typeof(AkRoom))]
-public class AkRoomInspector : Editor
+[UnityEditor.CustomEditor(typeof(AkRoom))]
+public class AkRoomInspector : UnityEditor.Editor
 {
-    AkRoom m_AkRoom;
+	private AkRoom m_AkRoom;
+	private UnityEditor.SerializedProperty priority;
 
-    SerializedProperty reverbAuxBus;
-    SerializedProperty reverbLevel;
-    SerializedProperty wallOcclusion;
-    SerializedProperty priority;
+	private UnityEditor.SerializedProperty reverbAuxBus;
+	private UnityEditor.SerializedProperty reverbLevel;
+	private UnityEditor.SerializedProperty wallOcclusion;
 
-    void OnEnable()
-    {
-        m_AkRoom = target as AkRoom;
+	private void OnEnable()
+	{
+		m_AkRoom = target as AkRoom;
 
         reverbAuxBus = serializedObject.FindProperty("reverbAuxBus");
         reverbLevel = serializedObject.FindProperty("reverbLevel");
@@ -33,14 +29,13 @@ public class AkRoomInspector : Editor
     {
         serializedObject.Update();
 
-        GUILayout.BeginVertical("Box");
-        {
-            EditorGUILayout.PropertyField(reverbAuxBus);
-            EditorGUILayout.PropertyField(reverbLevel);
-            EditorGUILayout.PropertyField(wallOcclusion);
-            EditorGUILayout.PropertyField(priority);
-        }
-        GUILayout.EndVertical();
+		using (new UnityEditor.EditorGUILayout.VerticalScope("box"))
+		{
+			UnityEditor.EditorGUILayout.PropertyField(reverbAuxBus);
+			UnityEditor.EditorGUILayout.PropertyField(reverbLevel);
+			UnityEditor.EditorGUILayout.PropertyField(wallOcclusion);
+			UnityEditor.EditorGUILayout.PropertyField(priority);
+		}
 
         AkGameObjectInspector.RigidbodyCheck(m_AkRoom.gameObject);
 

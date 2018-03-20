@@ -22,6 +22,15 @@
 									<ObjectRef Name="Fear_no_Evil" ID="{A1F17D99-0801-4F32-B74E-ADB2D9ACC556}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<AuxBus Name="Music_Reverb" ID="{FE5ADFD8-9900-4310-8FD6-1B5D2DB9FD5C}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+											<ObjectRef Name="Space_Dreaming" ID="{4FF7C4B2-37B0-4DFF-8E8A-1420102AE2DD}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+									</ReferenceList>
+								</AuxBus>
+							</ChildrenList>
 						</Bus>
 						<Bus Name="Ambisonic 2-2 Bus" ID="{63F2C6EF-50DA-4554-940D-A9A4ED2737AA}">
 							<PropertyList>

@@ -5,41 +5,29 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-
-[AddComponentMenu("Wwise/AkRoomPortalObstruction")]
-[RequireComponent(typeof(AkRoomPortal))]
+[UnityEngine.AddComponentMenu("Wwise/AkRoomPortalObstruction")]
+[UnityEngine.RequireComponent(typeof(AkRoomPortal))]
 /// @brief Obstructs/Occludes the spatial audio portal of the current game object from the spatial audio listener if at least one object is between them.
 /// @details If no spatial audio listener has been registered, there will be no obstruction.
 public class AkRoomPortalObstruction : AkObstructionOcclusion
 {
-    private AkRoomPortal m_portal;
+	private AkRoomPortal m_portal;
 
-    private void Awake()
-    {
-        InitIntervalsAndFadeRates();
-        m_portal = GetComponent<AkRoomPortal>();
-    }
+	private void Awake()
+	{
+		InitIntervalsAndFadeRates();
+		m_portal = GetComponent<AkRoomPortal>();
+	}
 
-    private void Update()
-    {
-        // Update Listeners
-        UpdateObstructionOcclusionValues(AkSpatialAudioListener.TheSpatialAudioListener);
+	protected override void UpdateObstructionOcclusionValuesForListeners()
+	{
+		UpdateObstructionOcclusionValues(AkSpatialAudioListener.TheSpatialAudioListener);
+	}
 
-        CastRays();
-
-        // Set Obstruction/Occlusion
-        foreach (var ObsOccPair in ObstructionOcclusionValues)
-        {
-            var ObsOccValue = ObsOccPair.Value;
-
-            if (ObsOccValue.Update(fadeRate))
-            {
-                AkSoundEngine.SetPortalObstruction(m_portal.GetID(), ObsOccValue.currentValue);
-            }
-        }
-    }
+	protected override void SetObstructionOcclusion(
+		System.Collections.Generic.KeyValuePair<AkAudioListener, ObstructionOcclusionValue> ObsOccPair)
+	{
+		AkSoundEngine.SetPortalObstruction(m_portal.GetID(), ObsOccPair.Value.currentValue);
+	}
 }
 #endif // #if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.

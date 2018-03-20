@@ -1,22 +1,23 @@
 #if UNITY_EDITOR
-using UnityEngine;
-using UnityEditor;
-using System;
-using System.Reflection;
-using System.Text.RegularExpressions;
-
-[InitializeOnLoad]
+[UnityEditor.InitializeOnLoad]
 public class AkWwisePostImportCallbackSetup
 {
+	private static int m_scheduledMigrationStart;
+	private static int m_scheduledMigrationStop;
+	private static bool m_scheduledReturnToLauncher;
+
+	private static bool m_pendingExecuteMethodCalled;
+
+	private static string s_CurrentScene;
+
 	static AkWwisePostImportCallbackSetup()
 	{
-		string[] arguments = Environment.GetCommandLineArgs();
-		if (Array.IndexOf(arguments, "-nographics") != -1 && Array.IndexOf(arguments, "-wwiseEnableWithNoGraphics") == -1)
-		{
+		var arguments = System.Environment.GetCommandLineArgs();
+		if (System.Array.IndexOf(arguments, "-nographics") != -1 &&
+		    System.Array.IndexOf(arguments, "-wwiseEnableWithNoGraphics") == -1)
 			return;
-		}
 
-		EditorApplication.delayCall += CheckMigrationStatus;
+		UnityEditor.EditorApplication.delayCall += CheckMigrationStatus;
 	}
 
 	private static void CheckMigrationStatus()
@@ -35,29 +36,23 @@ public class AkWwisePostImportCallbackSetup
 				ScheduleMigration();
 			}
 			else
-			{
 				RefreshCallback();
-			}
 		}
-		catch (Exception e)
+		catch (System.Exception e)
 		{
-			Debug.LogError("WwiseUnity: Error during migration: " + e);
+			UnityEngine.Debug.LogError("WwiseUnity: Error during migration: " + e);
 		}
 	}
-
-	private static int m_scheduledMigrationStart;
-	private static int m_scheduledMigrationStop;
-	private static bool m_scheduledReturnToLauncher;
 
 	private static void ScheduleMigration()
 	{
 		// TODO: Is delayCall wiped out during a script reload?
 		// If not, guard against having a delayCall from a previously loaded code being run after the new loading.
 
-		if (EditorApplication.isPlayingOrWillChangePlaymode || EditorApplication.isCompiling)
+		if (UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode || UnityEditor.EditorApplication.isCompiling)
 		{
 			// Skip if not in the right mode, wait for the next callback to see if we can proceed then.
-			EditorApplication.delayCall += ScheduleMigration;
+			UnityEditor.EditorApplication.delayCall += ScheduleMigration;
 			return;
 		}
 
@@ -68,19 +63,16 @@ public class AkWwisePostImportCallbackSetup
 			// Force the user to return to the launcher to perform the post-installation process if necessary
 			if (m_scheduledReturnToLauncher)
 			{
-				if (EditorUtility.DisplayDialog("Wwise Migration Successful!", "Please close Unity and go back to the Wwise Launcher to complete the installation.", "Quit"))
-				{
-					EditorApplication.Exit(0);
-				}
+				if (UnityEditor.EditorUtility.DisplayDialog("Wwise Migration Successful!",
+					"Please close Unity and go back to the Wwise Launcher to complete the installation.", "Quit"))
+					UnityEditor.EditorApplication.Exit(0);
 			}
 			else
-			{
-				EditorApplication.delayCall += RefreshCallback;
-			}
+				UnityEditor.EditorApplication.delayCall += RefreshCallback;
 		}
-		catch (Exception e)
+		catch (System.Exception e)
 		{
-			Debug.LogError("WwiseUnity: Error during migration: " + e);
+			UnityEngine.Debug.LogError("WwiseUnity: Error during migration: " + e);
 		}
 	}
 
@@ -90,38 +82,29 @@ public class AkWwisePostImportCallbackSetup
 		migrationStop = 0;
 		returnToLauncher = false;
 
-		string filename = Application.dataPath + "/../.WwiseLauncherLockFile";
+		var filename = UnityEngine.Application.dataPath + "/../.WwiseLauncherLockFile";
 
 		if (!System.IO.File.Exists(filename))
-		{
 			return false;
-		}
 
-		string fileContent = System.IO.File.ReadAllText(filename);
+		var fileContent = System.IO.File.ReadAllText(filename);
 
 		// Instantiate the regular expression object.
-		var r = new Regex("{\"migrateStart\":(\\d+),\"migrateStop\":(\\d+)(,\"returnToLauncher\":(true|false))?,.*}", RegexOptions.IgnoreCase);
+		var r = new System.Text.RegularExpressions.Regex(
+			"{\"migrateStart\":(\\d+),\"migrateStop\":(\\d+)(,\"returnToLauncher\":(true|false))?,.*}",
+			System.Text.RegularExpressions.RegexOptions.IgnoreCase);
 
 		// Match the regular expression pattern against a text string.
 		var m = r.Match(fileContent);
 
-		if (!m.Success ||
-			m.Groups.Count < 2 ||
-			m.Groups[1].Captures.Count < 1 ||
-			m.Groups[2].Captures.Count < 1 ||
-			!int.TryParse(m.Groups[1].Captures[0].ToString(), out migrationStart) ||
-			!int.TryParse(m.Groups[2].Captures[0].ToString(), out migrationStop))
-		{
-			throw new Exception("Error in the file format of .WwiseLauncherLockFile.");
-		}
-		else
-		{
-			// Handle optional properties
-			if (m.Groups.Count > 3 && m.Groups[4].Captures.Count > 0)
-			{
-				bool.TryParse(m.Groups[4].Captures[0].ToString(), out returnToLauncher);
-			}
-		}
+		if (!m.Success || m.Groups.Count < 2 || m.Groups[1].Captures.Count < 1 || m.Groups[2].Captures.Count < 1 ||
+		    !int.TryParse(m.Groups[1].Captures[0].ToString(), out migrationStart) ||
+		    !int.TryParse(m.Groups[2].Captures[0].ToString(), out migrationStop))
+			throw new System.Exception("Error in the file format of .WwiseLauncherLockFile.");
+
+		// Handle optional properties
+		if (m.Groups.Count > 3 && m.Groups[4].Captures.Count > 0)
+			bool.TryParse(m.Groups[4].Captures[0].ToString(), out returnToLauncher);
 
 		return true;
 	}
@@ -129,7 +112,8 @@ public class AkWwisePostImportCallbackSetup
 	private static void RefreshCallback()
 	{
 		PostImportFunction();
-		if (System.IO.File.Exists(System.IO.Path.Combine(Application.dataPath, WwiseSettings.WwiseSettingsFilename)))
+		if (System.IO.File.Exists(System.IO.Path.Combine(UnityEngine.Application.dataPath,
+			WwiseSettings.WwiseSettingsFilename)))
 		{
 			AkPluginActivator.Update();
 			AkPluginActivator.ActivatePluginsForEditor();
@@ -138,17 +122,16 @@ public class AkWwisePostImportCallbackSetup
 
 	private static void PostImportFunction()
 	{
-		EditorApplication.hierarchyWindowChanged += CheckWwiseGlobalExistance;
-		EditorApplication.delayCall += CheckPicker;
+		UnityEditor.EditorApplication.hierarchyWindowChanged += CheckWwiseGlobalExistance;
+		UnityEditor.EditorApplication.delayCall += CheckPicker;
 
-		if (EditorApplication.isPlayingOrWillChangePlaymode || EditorApplication.isCompiling)
-		{
+		if (UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode || UnityEditor.EditorApplication.isCompiling)
 			return;
-		}
 
 		try
 		{
-			if (System.IO.File.Exists(Application.dataPath + System.IO.Path.DirectorySeparatorChar + WwiseSettings.WwiseSettingsFilename))
+			if (System.IO.File.Exists(UnityEngine.Application.dataPath + System.IO.Path.DirectorySeparatorChar +
+			                          WwiseSettings.WwiseSettingsFilename))
 			{
 				WwiseSetupWizard.Settings = WwiseSettings.LoadSettings();
 				AkWwiseProjectInfo.GetData();
@@ -158,14 +141,12 @@ public class AkWwisePostImportCallbackSetup
 			{
 				AkWwisePicker.PopulateTreeview();
 				if (AkWwiseProjectInfo.GetData().autoPopulateEnabled)
-				{
 					AkWwiseWWUBuilder.StartWWUWatcher();
-				}
 			}
 		}
-		catch (Exception e)
+		catch (System.Exception e)
 		{
-			Debug.Log(e.ToString());
+			UnityEngine.Debug.Log(e.ToString());
 		}
 
 		//Check if a WwiseGlobal object exists in the current scene	
@@ -175,9 +156,7 @@ public class AkWwisePostImportCallbackSetup
 	private static void RefreshPlugins()
 	{
 		if (string.IsNullOrEmpty(AkWwiseProjectInfo.GetData().CurrentPluginConfig))
-		{
 			AkWwiseProjectInfo.GetData().CurrentPluginConfig = AkPluginActivator.CONFIG_PROFILE;
-		}
 
 		AkPluginActivator.ActivatePluginsForEditor();
 	}
@@ -189,33 +168,34 @@ public class AkWwisePostImportCallbackSetup
 #else
 		var logEntries = System.Type.GetType("UnityEditorInternal.LogEntries,UnityEditor.dll");
 #endif
-        if (logEntries != null)
-        {
-		    var clearMethod = logEntries.GetMethod("Clear", System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public);
-		    clearMethod.Invoke(null, null);
-        }
+		if (logEntries != null)
+		{
+			var clearMethod = logEntries.GetMethod("Clear",
+				System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public);
+			clearMethod.Invoke(null, null);
+		}
 	}
 
 	public static void CheckPicker()
 	{
-		if (EditorApplication.isPlayingOrWillChangePlaymode || EditorApplication.isCompiling)
+		if (UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode || UnityEditor.EditorApplication.isCompiling)
 		{
 			// Skip if not in the right mode, wait for the next callback to see if we can proceed then.
-			EditorApplication.delayCall += CheckPicker;
+			UnityEditor.EditorApplication.delayCall += CheckPicker;
 			return;
 		}
 
-		WwiseSettings settings = WwiseSettings.LoadSettings();
+		var settings = WwiseSettings.LoadSettings();
 
 		if (!settings.CreatedPicker)
 		{
 			// Delete all the ghost tabs (Failed to load).
-			EditorWindow[] windows = Resources.FindObjectsOfTypeAll<EditorWindow>();
+			var windows = UnityEngine.Resources.FindObjectsOfTypeAll<UnityEditor.EditorWindow>();
 			if (windows != null && windows.Length > 0)
 			{
-				foreach (EditorWindow window in windows)
+				foreach (var window in windows)
 				{
-					string windowTitle = window.titleContent.text;
+					var windowTitle = window.titleContent.text;
 
 					if (windowTitle.Equals("Failed to load") || windowTitle.Equals("AkWwisePicker"))
 					{
@@ -223,7 +203,7 @@ public class AkWwisePostImportCallbackSetup
 						{
 							window.Close();
 						}
-						catch (Exception)
+						catch (System.Exception)
 						{
 							// Do nothing here, this shoudn't cause any problem, however there has been
 							// occurences of Unity crashing on a null reference inside that method.
@@ -238,22 +218,20 @@ public class AkWwisePostImportCallbackSetup
 
 			// Populate the picker
 			AkWwiseProjectInfo.GetData(); // Load data
-			if (!String.IsNullOrEmpty(settings.WwiseProjectPath))
+			if (!string.IsNullOrEmpty(settings.WwiseProjectPath))
 			{
 				AkWwiseProjectInfo.Populate();
 				AkWwisePicker.init();
 
 				if (AkWwiseProjectInfo.GetData().autoPopulateEnabled)
-				{
 					AkWwiseWWUBuilder.StartWWUWatcher();
-				}
 
 				settings.CreatedPicker = true;
 				WwiseSettings.SaveSettings(settings);
 			}
 		}
 
-		EditorApplication.delayCall += CheckPendingExecuteMethod;
+		UnityEditor.EditorApplication.delayCall += CheckPendingExecuteMethod;
 	}
 
 	// TODO: Put this in AkUtilities?
@@ -262,16 +240,14 @@ public class AkWwisePostImportCallbackSetup
 		string className = null;
 		string methodName = null;
 
-		Regex r = new Regex("(.+)\\.(.+)", RegexOptions.IgnoreCase);
+		var r = new System.Text.RegularExpressions.Regex("(.+)\\.(.+)",
+			System.Text.RegularExpressions.RegexOptions.IgnoreCase);
 
-		Match m = r.Match(method);
+		var m = r.Match(method);
 
-		if (!m.Success ||
-			m.Groups.Count < 3 ||
-			m.Groups[1].Captures.Count < 1 ||
-			m.Groups[2].Captures.Count < 1)
+		if (!m.Success || m.Groups.Count < 3 || m.Groups[1].Captures.Count < 1 || m.Groups[2].Captures.Count < 1)
 		{
-			Debug.LogError("WwiseUnity: Error parsing wwiseExecuteMethod parameter: " + method);
+			UnityEngine.Debug.LogError("WwiseUnity: Error parsing wwiseExecuteMethod parameter: " + method);
 			return;
 		}
 
@@ -280,85 +256,81 @@ public class AkWwisePostImportCallbackSetup
 
 		try
 		{
-			Type type = System.Type.GetType(className);
-			MethodInfo clearMethod = type.GetMethod(methodName, System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public);
+			var type = System.Type.GetType(className);
+			var clearMethod = type.GetMethod(methodName,
+				System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.Public);
 			clearMethod.Invoke(null, null);
 		}
-		catch (Exception e)
+		catch (System.Exception e)
 		{
-			Debug.LogError("WwiseUnity: Exception caught when calling " + method + ": " + e.ToString());
+			UnityEngine.Debug.LogError("WwiseUnity: Exception caught when calling " + method + ": " + e);
 		}
 	}
 
-	private static bool m_pendingExecuteMethodCalled = false;
-
 	private static void CheckPendingExecuteMethod()
 	{
-		string[] arguments = Environment.GetCommandLineArgs();
-		int indexOfCommand = Array.IndexOf(arguments, "-wwiseExecuteMethod");
+		var arguments = System.Environment.GetCommandLineArgs();
+		var indexOfCommand = System.Array.IndexOf(arguments, "-wwiseExecuteMethod");
 
-		if (!m_pendingExecuteMethodCalled && indexOfCommand != -1 && arguments.Length > (indexOfCommand + 1))
+		if (!m_pendingExecuteMethodCalled && indexOfCommand != -1 && arguments.Length > indexOfCommand + 1)
 		{
-			string methodToExecute = arguments[indexOfCommand + 1];
+			var methodToExecute = arguments[indexOfCommand + 1];
 
 			ExecuteMethod(methodToExecute);
 			m_pendingExecuteMethodCalled = true;
 		}
 	}
 
-	private static string s_CurrentScene = null;
-
 	// Called when changes are made to the scene and when a new scene is created.
 	public static void CheckWwiseGlobalExistance()
 	{
-		WwiseSettings settings = WwiseSettings.LoadSettings();
-		string activeSceneName = UnityEditor.SceneManagement.EditorSceneManager.GetActiveScene().name;
-		if (String.IsNullOrEmpty(s_CurrentScene) || !s_CurrentScene.Equals(activeSceneName))
+		var settings = WwiseSettings.LoadSettings();
+		var activeSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+		if (string.IsNullOrEmpty(s_CurrentScene) || !s_CurrentScene.Equals(activeSceneName))
 		{
 			// Look for a game object which has the initializer component
-			AkInitializer[] AkInitializers = UnityEngine.Object.FindObjectsOfType(typeof(AkInitializer)) as AkInitializer[];
+			var AkInitializers = UnityEngine.Object.FindObjectsOfType<AkInitializer>();
 			if (AkInitializers.Length == 0)
 			{
-				if (settings.CreateWwiseGlobal == true)
+				if (settings.CreateWwiseGlobal)
 				{
 					//No Wwise object in this scene, create one so that the sound engine is initialized and terminated properly even if the scenes are loaded
 					//in the wrong order.
-					GameObject objWwise = new GameObject("WwiseGlobal");
+					var objWwise = new UnityEngine.GameObject("WwiseGlobal");
 
 					//Attach initializer and terminator components
-					AkInitializer init = objWwise.AddComponent<AkInitializer>();
+					var init = objWwise.AddComponent<AkInitializer>();
 					AkWwiseProjectInfo.GetData().CopyInitSettings(init);
 				}
 			}
 			else
 			{
 				if (settings.CreateWwiseGlobal == false && AkInitializers[0].gameObject.name == "WwiseGlobal")
-				{
-					GameObject.DestroyImmediate(AkInitializers[0].gameObject);
-				}
+					UnityEngine.Object.DestroyImmediate(AkInitializers[0].gameObject);
 				//All scenes will share the same initializer.  So expose the init settings consistently across scenes.
 				AkWwiseProjectInfo.GetData().CopyInitSettings(AkInitializers[0]);
 			}
 
-			if (Camera.main != null)
+			if (UnityEngine.Camera.main != null)
 			{
-				GameObject mainCameraGameObject = Camera.main.gameObject;
-				AkAudioListener akListener = mainCameraGameObject.GetComponent<AkAudioListener>();
+				var mainCameraGameObject = UnityEngine.Camera.main.gameObject;
+				var akListener = mainCameraGameObject.GetComponent<AkAudioListener>();
 
-				if (settings.CreateWwiseListener == true)
+				if (settings.CreateWwiseListener)
 				{
-					AudioListener listener = mainCameraGameObject.GetComponent<AudioListener>();
+					var listener = mainCameraGameObject.GetComponent<UnityEngine.AudioListener>();
 					if (listener != null)
-						Component.DestroyImmediate(listener);
+						UnityEngine.Object.DestroyImmediate(listener);
 
 					// Add the AkAudioListener script
 					if (akListener == null)
 					{
 						akListener = mainCameraGameObject.AddComponent<AkAudioListener>();
-						AkGameObj akGameObj = akListener.GetComponent<AkGameObj>();
+						var akGameObj = akListener.GetComponent<AkGameObj>();
 						akGameObj.isEnvironmentAware = false;
 
-						Debug.LogWarning("Automatically added AkAudioListener to Main Camera. Go to \"Edit > Wwise Settings...\" to disable this functionality.");
+						UnityEngine.Debug.LogWarning(
+							"Automatically added AkAudioListener to Main Camera. Go to \"Edit > Wwise Settings...\" to disable this functionality.");
 					}
 				}
 			}

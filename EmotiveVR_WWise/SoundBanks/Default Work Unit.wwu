@@ -5,8 +5,11 @@
 			<ChildrenList>
 				<SoundBank Name="DefaultSoundBank" ID="{709EA685-E2F6-46A3-885F-9B5815FACCDF}">
 					<ObjectInclusionList>
+						<ObjectRef Name="PlayBeep" ID="{349D24D4-7EF9-4261-B8CA-86C4391B609F}" WorkUnitID="{73D3D798-723D-4452-BAD3-99FF9084AF40}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="InteractiveMusic" ID="{B2203788-DB09-4858-8D6E-9A41ECFCC6F4}" WorkUnitID="{73D3D798-723D-4452-BAD3-99FF9084AF40}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="VideoAudio" ID="{91F403A9-23F9-4B4A-A261-9E283D56FBA0}" WorkUnitID="{73D3D798-723D-4452-BAD3-99FF9084AF40}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Interactive_Music_2" ID="{4E5A499E-2888-49DC-AA8A-977929879A7F}" WorkUnitID="{73D3D798-723D-4452-BAD3-99FF9084AF40}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="PlayFreudAudio" ID="{C2DECE52-7A19-4ECB-B12C-E98DAC5A7753}" WorkUnitID="{73D3D798-723D-4452-BAD3-99FF9084AF40}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="StartVideoSound" ID="{5927E3E9-7344-4EF7-BCE6-2DFABB6F268D}" WorkUnitID="{73D3D798-723D-4452-BAD3-99FF9084AF40}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

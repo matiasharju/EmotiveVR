@@ -5,72 +5,68 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
-
-public class AkTriangleArray : IDisposable
+public class AkTriangleArray : System.IDisposable
 {
-    int SIZE_OF_AKTRIANGLE = AkSoundEnginePINVOKE.CSharp_AkTriangleProxy_GetSizeOf();
+	private readonly int SIZE_OF_AKTRIANGLE = AkSoundEnginePINVOKE.CSharp_AkTriangleProxy_GetSizeOf();
+	private System.IntPtr m_Buffer;
+	private int m_Count;
 
-    public AkTriangleArray(int count)
-    {
-        m_Count = count;
-        m_Buffer = Marshal.AllocHGlobal(count * SIZE_OF_AKTRIANGLE);
+	public AkTriangleArray(int count)
+	{
+		m_Count = count;
+		m_Buffer = System.Runtime.InteropServices.Marshal.AllocHGlobal(count * SIZE_OF_AKTRIANGLE);
 
-        if (m_Buffer != IntPtr.Zero)
-            for (int i = 0; i < count; ++i)
-                AkSoundEnginePINVOKE.CSharp_AkTriangleProxy_Clear(GetObjectPtr(i));
-    }
+		if (m_Buffer != System.IntPtr.Zero)
+		{
+			for (var i = 0; i < count; ++i)
+				AkSoundEnginePINVOKE.CSharp_AkTriangleProxy_Clear(GetObjectPtr(i));
+		}
+	}
 
-    ~AkTriangleArray()
-    {
-        Dispose();
-    }
+	public void Dispose()
+	{
+		if (m_Buffer != System.IntPtr.Zero)
+		{
+			for (var i = 0; i < m_Count; ++i)
+				AkSoundEnginePINVOKE.CSharp_AkTriangleProxy_DeleteName(GetObjectPtr(i));
 
-    public void Dispose()
-    {
-        if (m_Buffer != IntPtr.Zero)
-        {
-            for (int i = 0; i < m_Count; ++i)
-                AkSoundEnginePINVOKE.CSharp_AkTriangleProxy_DeleteName(GetObjectPtr(i));
+			System.Runtime.InteropServices.Marshal.FreeHGlobal(m_Buffer);
+			m_Buffer = System.IntPtr.Zero;
+			m_Count = 0;
+		}
+	}
 
-            Marshal.FreeHGlobal(m_Buffer);
-            m_Buffer = IntPtr.Zero;
-            m_Count = 0;
-        }
-    }
+	~AkTriangleArray()
+	{
+		Dispose();
+	}
 
 	public void Reset()
 	{
 		m_Count = 0;
 	}
 
-    public AkTriangle GetTriangle(int index)
-    {
-        if (index >= m_Count)
-            return null;
+	public AkTriangle GetTriangle(int index)
+	{
+		if (index >= m_Count)
+			return null;
 
-        return new AkTriangle(GetObjectPtr(index), false);
-    }
+		return new AkTriangle(GetObjectPtr(index), false);
+	}
 
-    public IntPtr GetBuffer()
-    {
-        return m_Buffer;
-    }
+	public System.IntPtr GetBuffer()
+	{
+		return m_Buffer;
+	}
 
-    public int Count()
-    {
-        return m_Count;
-    }
+	public int Count()
+	{
+		return m_Count;
+	}
 
-    IntPtr GetObjectPtr(int index)
-    {
-        return (IntPtr)(m_Buffer.ToInt64() + SIZE_OF_AKTRIANGLE * index);
-    }
-
-    private IntPtr m_Buffer;
-    private int m_Count;
-};
+	private System.IntPtr GetObjectPtr(int index)
+	{
+		return (System.IntPtr) (m_Buffer.ToInt64() + SIZE_OF_AKTRIANGLE * index);
+	}
+}
 #endif // #if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.

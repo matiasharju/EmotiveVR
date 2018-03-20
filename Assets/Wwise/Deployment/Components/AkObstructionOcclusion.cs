@@ -5,125 +5,139 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-
-public abstract class AkObstructionOcclusion : MonoBehaviour
+public abstract class AkObstructionOcclusion : UnityEngine.MonoBehaviour
 {
-    [Tooltip("Layers of obstructers/occluders")]
-    /// Indicates which layers act as obstructers/occluders.
-    public LayerMask LayerMask = -1;
+	private readonly System.Collections.Generic.List<AkAudioListener> listenersToRemove =
+		new System.Collections.Generic.List<AkAudioListener>();
 
-    [Tooltip("The number of seconds between raycasts")]
-    /// The number of seconds between obstruction/occlusion checks.
-    public float refreshInterval = 1;
-    private float refreshTime = 0;
+	private readonly System.Collections.Generic.Dictionary<AkAudioListener, ObstructionOcclusionValue>
+		ObstructionOcclusionValues = new System.Collections.Generic.Dictionary<AkAudioListener, ObstructionOcclusionValue>();
 
-    [Tooltip("Fade time in seconds")]
-    /// The number of seconds for fade ins and fade outs.
-    public float fadeTime = 0.5f;
-    protected float fadeRate = 0.0f;
+	protected float fadeRate;
 
-    [Tooltip("Maximum distance to perform the obstruction/occlusion. Negative values mean infinite")]
-    /// The maximum distance at which to perform obstruction/occlusion. A negative value will be interpreted as inifinite distance.
-    public float maxDistance = -1.0f;
+	[UnityEngine.Tooltip("Fade time in seconds")]
+	/// The number of seconds for fade ins and fade outs.
+	public float fadeTime = 0.5f;
 
-    protected void InitIntervalsAndFadeRates()
-    {
-        refreshTime = Random.Range(0.0f, refreshInterval);
-        fadeRate = 1 / fadeTime;
-    }
+	[UnityEngine.Tooltip("Layers of obstructers/occluders")]
+	/// Indicates which layers act as obstructers/occluders.
+	public UnityEngine.LayerMask LayerMask = -1;
 
-    protected class ObstructionOcclusionValue
-    {
-        public float targetValue = 0.0f;
-        public float currentValue = 0.0f;
+	[UnityEngine.Tooltip("Maximum distance to perform the obstruction/occlusion. Negative values mean infinite")]
+	/// The maximum distance at which to perform obstruction/occlusion. A negative value will be interpreted as inifinite distance.
+	public float maxDistance = -1.0f;
 
-        public bool Update(float fadeRate)
-        {
-            if (Mathf.Approximately(targetValue, currentValue))
-                return false;
+	[UnityEngine.Tooltip("The number of seconds between raycasts")]
+	/// The number of seconds between obstruction/occlusion checks.
+	public float refreshInterval = 1;
 
-            currentValue += fadeRate * Mathf.Sign(targetValue - currentValue) * Time.deltaTime;
-            currentValue = Mathf.Clamp(currentValue, 0.0f, 1.0f);
+	private float refreshTime;
 
-            return true;
-        }
-    }
+	protected void InitIntervalsAndFadeRates()
+	{
+		refreshTime = UnityEngine.Random.Range(0.0f, refreshInterval);
+		fadeRate = 1 / fadeTime;
+	}
 
-    protected Dictionary<AkAudioListener, ObstructionOcclusionValue> ObstructionOcclusionValues = new Dictionary<AkAudioListener, ObstructionOcclusionValue>();
-    private List<AkAudioListener> listenersToRemove = new List<AkAudioListener>();
+	protected void UpdateObstructionOcclusionValues(System.Collections.Generic.List<AkAudioListener> listenerList)
+	{
+		// add new listeners
+		for (var i = 0; i < listenerList.Count; ++i)
+		{
+			if (!ObstructionOcclusionValues.ContainsKey(listenerList[i]))
+				ObstructionOcclusionValues.Add(listenerList[i], new ObstructionOcclusionValue());
+		}
 
-    protected void UpdateObstructionOcclusionValues(List<AkAudioListener> listenerList)
-    {
-        // add new listeners
-        for (int i = 0; i < listenerList.Count; ++i)
-        {
-            if (!ObstructionOcclusionValues.ContainsKey(listenerList[i]))
-                ObstructionOcclusionValues.Add(listenerList[i], new ObstructionOcclusionValue());
-        }
+		// remove listeners
+		foreach (var ObsOccPair in ObstructionOcclusionValues)
+		{
+			if (!listenerList.Contains(ObsOccPair.Key))
+				listenersToRemove.Add(ObsOccPair.Key);
+		}
 
-        // remove listeners
-        foreach (var ObsOccPair in ObstructionOcclusionValues)
-        {
-            if (!listenerList.Contains(ObsOccPair.Key))
-                listenersToRemove.Add(ObsOccPair.Key);
-        }
-        for (int i = 0; i < listenersToRemove.Count; ++i)
-        {
-            ObstructionOcclusionValues.Remove(listenersToRemove[i]);
-        }
-    }
+		for (var i = 0; i < listenersToRemove.Count; ++i)
+			ObstructionOcclusionValues.Remove(listenersToRemove[i]);
+	}
 
-    protected void UpdateObstructionOcclusionValues(AkAudioListener listener)
-    {
-        if (!listener)
-            return;
+	protected void UpdateObstructionOcclusionValues(AkAudioListener listener)
+	{
+		if (!listener)
+			return;
 
-        // add new listeners
-        if (!ObstructionOcclusionValues.ContainsKey(listener))
-            ObstructionOcclusionValues.Add(listener, new ObstructionOcclusionValue());
+		// add new listeners
+		if (!ObstructionOcclusionValues.ContainsKey(listener))
+			ObstructionOcclusionValues.Add(listener, new ObstructionOcclusionValue());
 
-        // remove listeners
-        foreach (var ObsOccPair in ObstructionOcclusionValues)
-        {
-            if (listener != ObsOccPair.Key)
-                listenersToRemove.Add(ObsOccPair.Key);
-        }
-        for (int i = 0; i < listenersToRemove.Count; ++i)
-        {
-            ObstructionOcclusionValues.Remove(listenersToRemove[i]);
-        }
-    }
+		// remove listeners
+		foreach (var ObsOccPair in ObstructionOcclusionValues)
+		{
+			if (listener != ObsOccPair.Key)
+				listenersToRemove.Add(ObsOccPair.Key);
+		}
 
-    protected void CastRays()
-    {
-        if (refreshTime > refreshInterval)
-        {
-            refreshTime -= refreshInterval;
+		for (var i = 0; i < listenersToRemove.Count; ++i)
+			ObstructionOcclusionValues.Remove(listenersToRemove[i]);
+	}
 
-            foreach (var ObsOccPair in ObstructionOcclusionValues)
-            {
-                var listener = ObsOccPair.Key;
-                var ObsOccValue = ObsOccPair.Value;
+	private void CastRays()
+	{
+		if (refreshTime > refreshInterval)
+		{
+			refreshTime -= refreshInterval;
 
-                Vector3 difference = listener.transform.position - transform.position;
-                float magnitude = difference.magnitude;
+			foreach (var ObsOccPair in ObstructionOcclusionValues)
+			{
+				var listener = ObsOccPair.Key;
+				var ObsOccValue = ObsOccPair.Value;
 
-                if (maxDistance > 0 && magnitude > maxDistance)
-                {
-                    ObsOccValue.targetValue = ObsOccValue.currentValue;
-                }
-                else
-                {
-                    // since we already need magnitude, it is faster to make the division ourselves than to use difference.normalized
-                    ObsOccValue.targetValue = Physics.Raycast(transform.position, difference / magnitude, magnitude, LayerMask.value) ? 1.0f : 0.0f;
-                }
-            }
-        }
+				var difference = listener.transform.position - transform.position;
+				var magnitude = difference.magnitude;
 
-        refreshTime += Time.deltaTime;
-    }
+				if (maxDistance > 0 && magnitude > maxDistance)
+					ObsOccValue.targetValue = ObsOccValue.currentValue;
+				else
+				{
+					ObsOccValue.targetValue =
+						UnityEngine.Physics.Raycast(transform.position, difference / magnitude, magnitude, LayerMask.value) ? 1.0f : 0.0f;
+				}
+			}
+		}
+
+		refreshTime += UnityEngine.Time.deltaTime;
+	}
+
+	protected abstract void UpdateObstructionOcclusionValuesForListeners();
+
+	protected abstract void SetObstructionOcclusion(
+		System.Collections.Generic.KeyValuePair<AkAudioListener, ObstructionOcclusionValue> ObsOccPair);
+
+	private void Update()
+	{
+		UpdateObstructionOcclusionValuesForListeners();
+
+		CastRays();
+
+		foreach (var ObsOccPair in ObstructionOcclusionValues)
+		{
+			if (ObsOccPair.Value.Update(fadeRate))
+				SetObstructionOcclusion(ObsOccPair);
+		}
+	}
+
+	protected class ObstructionOcclusionValue
+	{
+		public float currentValue;
+		public float targetValue;
+
+		public bool Update(float fadeRate)
+		{
+			if (UnityEngine.Mathf.Approximately(targetValue, currentValue))
+				return false;
+
+			currentValue += fadeRate * UnityEngine.Mathf.Sign(targetValue - currentValue) * UnityEngine.Time.deltaTime;
+			currentValue = UnityEngine.Mathf.Clamp(currentValue, 0.0f, 1.0f);
+			return true;
+		}
+	}
 }
 #endif // #if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.

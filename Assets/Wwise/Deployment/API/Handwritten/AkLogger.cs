@@ -10,10 +10,12 @@ public class AkLogger
 {
 	// @todo sjl: Have SWIG specify the delegate's signature (possibly in AkSoundEngine) so that we can automatically determine the appropriate string marshaling.
 	[System.Runtime.InteropServices.UnmanagedFunctionPointer(System.Runtime.InteropServices.CallingConvention.StdCall)]
-	public delegate void ErrorLoggerInteropDelegate([System.Runtime.InteropServices.MarshalAs(System.Runtime.InteropServices.UnmanagedType.LPStr)] string message);
-	ErrorLoggerInteropDelegate errorLoggerDelegate = new ErrorLoggerInteropDelegate(WwiseInternalLogError);
+	public delegate void ErrorLoggerInteropDelegate(
+		[System.Runtime.InteropServices.MarshalAs(System.Runtime.InteropServices.UnmanagedType.LPStr)]
+		string message);
 
-	static AkLogger ms_Instance = new AkLogger();
+	private static AkLogger ms_Instance = new AkLogger();
+	private ErrorLoggerInteropDelegate errorLoggerDelegate = WwiseInternalLogError;
 
 	private AkLogger()
 	{
@@ -22,6 +24,11 @@ public class AkLogger
 			ms_Instance = this;
 			AkSoundEngine.SetErrorLogger(errorLoggerDelegate);
 		}
+	}
+
+	public static AkLogger Instance
+	{
+		get { return ms_Instance; }
 	}
 
 	~AkLogger()
@@ -33,8 +40,6 @@ public class AkLogger
 			AkSoundEngine.SetErrorLogger();
 		}
 	}
-
-	public static AkLogger Instance { get { return ms_Instance; } } // used to force instantiation of this singleton
 
 	public void Init()
 	{

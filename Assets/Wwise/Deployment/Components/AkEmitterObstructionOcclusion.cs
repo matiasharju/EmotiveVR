@@ -5,49 +5,43 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-
-[AddComponentMenu("Wwise/AkEmitterObstructionOcclusion")]
-[RequireComponent(typeof(AkGameObj))]
+[UnityEngine.AddComponentMenu("Wwise/AkEmitterObstructionOcclusion")]
+[UnityEngine.RequireComponent(typeof(AkGameObj))]
 /// @brief Obstructs/Occludes the emitter of the current game object from its listeners if at least one object is between them.
 /// @details The current implementation does not support occlusion.
 public class AkEmitterObstructionOcclusion : AkObstructionOcclusion
 {
-    private AkGameObj m_gameObj;
+	private AkGameObj m_gameObj;
 
-    private void Awake()
-    {
-        InitIntervalsAndFadeRates();
-        m_gameObj = GetComponent<AkGameObj>();
-    }
+	private void Awake()
+	{
+		InitIntervalsAndFadeRates();
+		m_gameObj = GetComponent<AkGameObj>();
+	}
 
-    private void Update()
-    {
-        bool useSpatialAudio = AkRoom.IsSpatialAudioEnabled;
+	protected override void UpdateObstructionOcclusionValuesForListeners()
+	{
+		if (AkRoom.IsSpatialAudioEnabled)
+			UpdateObstructionOcclusionValues(AkSpatialAudioListener.TheSpatialAudioListener);
+		else
+		{
+			if (m_gameObj.IsUsingDefaultListeners)
+				UpdateObstructionOcclusionValues(AkAudioListener.DefaultListeners.ListenerList);
 
-        // Update Listeners
-        if (useSpatialAudio)
-            UpdateObstructionOcclusionValues(AkSpatialAudioListener.TheSpatialAudioListener);
-        else
-            UpdateObstructionOcclusionValues(m_gameObj.ListenerList);
+			UpdateObstructionOcclusionValues(m_gameObj.ListenerList);
+		}
+	}
 
-        CastRays();
-
-        // Set Obstruction/Occlusion
-        foreach (var ObsOccPair in ObstructionOcclusionValues)
-        {
-            var ObsOccValue = ObsOccPair.Value;
-
-            if (ObsOccValue.Update(fadeRate))
-            {
-                if (useSpatialAudio)
-                    AkSoundEngine.SetEmitterObstruction(gameObject, ObsOccValue.currentValue);
-                else
-                    AkSoundEngine.SetObjectObstructionAndOcclusion(gameObject, ObsOccPair.Key.gameObject, 0.0f, ObsOccValue.currentValue);
-            }
-        }
-    }
+	protected override void SetObstructionOcclusion(
+		System.Collections.Generic.KeyValuePair<AkAudioListener, ObstructionOcclusionValue> ObsOccPair)
+	{
+		if (AkRoom.IsSpatialAudioEnabled)
+			AkSoundEngine.SetEmitterObstruction(gameObject, ObsOccPair.Value.currentValue);
+		else
+		{
+			AkSoundEngine.SetObjectObstructionAndOcclusion(gameObject, ObsOccPair.Key.gameObject, 0.0f,
+				ObsOccPair.Value.currentValue);
+		}
+	}
 }
 #endif // #if ! (UNITY_DASHBOARD_WIDGET || UNITY_WEBPLAYER || UNITY_WII || UNITY_WIIU || UNITY_NACL || UNITY_FLASH || UNITY_BLACKBERRY) // Disable under unsupported platforms.

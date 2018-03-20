@@ -13,6 +13,13 @@
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="Head_direction" ID="{015B8B24-8EDF-4913-9B7A-3D2A1CAC6328}">
+					<PropertyList>
+						<Property Name="BindToBuiltInParam" Type="int16" Value="7"/>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="180"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

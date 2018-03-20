@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PluginInfo Project="EmotiveVR_WWise" Platform="Windows" BasePlatform="Windows">
 	<Plugins>
+		<Plugin Name="Wwise Sine" ID="6553602" DLL="AkSineTone"/>
 		<Plugin Name="Resonance Audio Renderer" ID="6557955" DLL="ResonanceAudioFX"/>
+		<Plugin Name="Wwise Tone Generator" ID="6684674" DLL="AkToneGen"/>
 		<Plugin Name="Wwise Parametric EQ" ID="6881283" DLL="AkParametricEQ"/>
+		<Plugin Name="Wwise RoomVerb" ID="7733251" DLL="AkRoomVerb"/>
 		<Plugin Name="Wwise Flanger" ID="8192003" DLL="AkFlanger"/>
 		<Plugin Name="Wwise Stereo Delay" ID="8847363" DLL="AkStereoDelay"/>
 		<Plugin Name="Wwise Harmonizer" ID="9043971" DLL="AkHarmonizer"/>

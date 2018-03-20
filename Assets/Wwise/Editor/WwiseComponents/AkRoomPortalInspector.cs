@@ -5,48 +5,43 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-using UnityEngine;
-using UnityEditor;
-using System;
-using System.Collections.Generic;
-
-[CanEditMultipleObjects]
-[CustomEditor(typeof(AkRoomPortal))]
-public class AkRoomPortalInspector : Editor
+[UnityEditor.CanEditMultipleObjects]
+[UnityEditor.CustomEditor(typeof(AkRoomPortal))]
+public class AkRoomPortalInspector : UnityEditor.Editor
 {
-    AkUnityEventHandlerInspector m_OpenPortalEventHandlerInspector = new AkUnityEventHandlerInspector();
-    AkUnityEventHandlerInspector m_ClosePortalEventHandlerInspector = new AkUnityEventHandlerInspector();
+	private readonly AkUnityEventHandlerInspector m_ClosePortalEventHandlerInspector = new AkUnityEventHandlerInspector();
+	private readonly AkUnityEventHandlerInspector m_OpenPortalEventHandlerInspector = new AkUnityEventHandlerInspector();
 
-    [UnityEditor.MenuItem("GameObject/Wwise/Room Portal", false, 1)]
-    public static void CreatePortal()
-    {
-        GameObject portal = new GameObject("RoomPortal");
+	private readonly int[] m_selectedIndex = new int[2];
+	private readonly AkRoom.PriorityList[] roomList = { new AkRoom.PriorityList(), new AkRoom.PriorityList() };
 
-        Undo.AddComponent<AkRoomPortal>(portal);
-        portal.GetComponent<Collider>().isTrigger = true;
+	private AkRoomPortal m_roomPortal;
 
-        Selection.objects = new UnityEngine.Object[] { portal };
-    }
+	[UnityEditor.MenuItem("GameObject/Wwise/Room Portal", false, 1)]
+	public static void CreatePortal()
+	{
+		var portal = new UnityEngine.GameObject("RoomPortal");
 
-    AkRoomPortal m_roomPortal;
-    AkRoom.PriorityList[] roomList = new AkRoom.PriorityList[] { new AkRoom.PriorityList(), new AkRoom.PriorityList() };
+		UnityEditor.Undo.AddComponent<AkRoomPortal>(portal);
+		portal.GetComponent<UnityEngine.Collider>().isTrigger = true;
 
-    int[] m_selectedIndex = new int[2];
+		UnityEditor.Selection.objects = new UnityEngine.Object[] { portal };
+	}
 
-    void OnEnable()
-    {
-        m_OpenPortalEventHandlerInspector.Init(serializedObject, "triggerList", "Open On: ", false);
-        m_ClosePortalEventHandlerInspector.Init(serializedObject, "closePortalTriggerList", "Close On: ", false);
+	private void OnEnable()
+	{
+		m_OpenPortalEventHandlerInspector.Init(serializedObject, "triggerList", "Open On: ", false);
+		m_ClosePortalEventHandlerInspector.Init(serializedObject, "closePortalTriggerList", "Close On: ", false);
 
         m_roomPortal = target as AkRoomPortal;
 
-        m_roomPortal.FindOverlappingRooms(roomList);
-        for (int i = 0; i < 2; i++)
-        {
-            int index = roomList[i].BinarySearch(m_roomPortal.rooms[i]);
-            m_selectedIndex[i] = index == -1 ? 0 : index;
-        }
-    }
+		m_roomPortal.FindOverlappingRooms(roomList);
+		for (var i = 0; i < 2; i++)
+		{
+			var index = roomList[i].BinarySearch(m_roomPortal.rooms[i]);
+			m_selectedIndex[i] = index == -1 ? 0 : index;
+		}
+	}
 
     public override void OnInspectorGUI()
     {
@@ -57,24 +52,26 @@ public class AkRoomPortalInspector : Editor
 
         m_roomPortal.FindOverlappingRooms(roomList);
 
-        GUILayout.BeginVertical("Box");
-        {
-            string[] labels = new string[2]{ "Back", "Front" };
+		using (new UnityEditor.EditorGUILayout.VerticalScope("box"))
+		{
+			var labels = new string[2] { "Back", "Front" };
 
-            for (int i = 0; i < 2; i++)
-            {
-                int roomListCount = roomList[i].rooms.Count;
-                string[] roomLabels = new string[roomListCount];
+			for (var i = 0; i < 2; i++)
+			{
+				var roomListCount = roomList[i].rooms.Count;
+				var roomLabels = new string[roomListCount];
 
-                for (int j = 0; j < roomListCount; j++)
-                    roomLabels[j] = (j + 1) + ". " + roomList[i].rooms[j].name;
+				for (var j = 0; j < roomListCount; j++)
+					roomLabels[j] = j + 1 + ". " + roomList[i].rooms[j].name;
 
-                m_selectedIndex[i] = EditorGUILayout.Popup(labels[i] + " Room", Mathf.Clamp(m_selectedIndex[i], 0, roomListCount - 1), roomLabels);
+				m_selectedIndex[i] = UnityEditor.EditorGUILayout.Popup(labels[i] + " Room",
+					UnityEngine.Mathf.Clamp(m_selectedIndex[i], 0, roomListCount - 1), roomLabels);
 
-                m_roomPortal.rooms[i] = (m_selectedIndex[i] < 0 || m_selectedIndex[i] >= roomListCount) ? null : roomList[i].rooms[m_selectedIndex[i]];
-            }
-        }
-        GUILayout.EndVertical();
+				m_roomPortal.rooms[i] = m_selectedIndex[i] < 0 || m_selectedIndex[i] >= roomListCount
+					? null
+					: roomList[i].rooms[m_selectedIndex[i]];
+			}
+		}
 
         serializedObject.ApplyModifiedProperties();
     }

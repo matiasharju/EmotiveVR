@@ -3,10 +3,94 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{7011B163-7DEB-4017-B5E0-DAF3F1916B50}" PersistMode="Standalone">
 			<ChildrenList>
-				<Sound Name="Freud_2F1T07_DEMO_ambiX_2nd_order_9ch" ID="{7CCA873C-F81E-442F-AEF7-204661685C1A}" ShortID="710474234">
+				<Sound Name="Beep" ID="{1800EA58-97A1-4AAE-817E-97AB4462DB77}" ShortID="949726103">
+					<PropertyList>
+						<Property Name="IsGlobalLimit" Type="int16" Value="1"/>
+						<Property Name="IsVoice" Type="bool" Value="True"/>
+						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BDB338AD-5F17-4284-ABCA-FA5C700A3477}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{915B61B1-18DF-4962-AED9-7E215C7469A8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<SourcePlugin Name="Wwise Sine" ID="{27461A66-DEFD-4FB3-B1A3-714D8CEFB3B2}" ShortID="844826255" PluginName="Wwise Sine" CompanyID="0" PluginID="100">
+							<PropertyList>
+								<Property Name="SineDuration" Type="Real32" Value="0.2"/>
+								<Property Name="SineFrequency" Type="Real32" Value="1000"/>
+							</PropertyList>
+							<Language>English(US)</Language>
+						</SourcePlugin>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Wwise Sine" ID="{27461A66-DEFD-4FB3-B1A3-714D8CEFB3B2}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Noise" ID="{6808C086-3D89-4E62-B011-4C9FAA42EEAA}" ShortID="928936039">
+					<PropertyList>
+						<Property Name="IsVoice" Type="bool" Value="True"/>
+						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BDB338AD-5F17-4284-ABCA-FA5C700A3477}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{915B61B1-18DF-4962-AED9-7E215C7469A8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<SourcePlugin Name="Wwise Tone Generator" ID="{78CC1067-667D-4060-A0A8-8DB93397536C}" ShortID="926620011" PluginName="Wwise Tone Generator" CompanyID="0" PluginID="102">
+							<PropertyList>
+								<Property Name="FixDur" Type="Real32" Value="1.8"/>
+								<Property Name="WaveType" Type="int32" Value="4"/>
+							</PropertyList>
+							<Language>English(US)</Language>
+						</SourcePlugin>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Wwise Tone Generator" ID="{78CC1067-667D-4060-A0A8-8DB93397536C}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Freud_TEST_Ambisonic" ID="{9E247B34-5C60-49FF-B17E-72229ED5FDAF}" ShortID="639397554">
 					<PropertyList>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
 						<Property Name="PositioningType" Type="int16" Value="1"/>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">
@@ -20,27 +104,49 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="Freud_2F1T07_DEMO_ambiX_2nd_order_9ch" ID="{189396D6-A62F-4DB9-83E2-F678A137E9B1}" ShortID="429010084">
-							<PropertyList>
-								<Property Name="ChannelConfigOverride" Type="int64" Value="521"/>
-							</PropertyList>
+						<AudioFileSource Name="Freud_TEST_Ambisonic2ndOrder" ID="{14D0F2C4-1480-47EB-96B0-DA824E1A40F1}" ShortID="693545233">
 							<Language>SFX</Language>
-							<AudioFile>Freud_2F1T07_DEMO_ambiX_2nd_order_9ch.wav</AudioFile>
-						</AudioFileSource>
-						<AudioFileSource Name="Freud_2-F1-7_PREMIX_Unity" ID="{9963D92C-0342-4486-A83C-903FCA302EBB}" ShortID="152024896">
-							<PropertyList>
-								<Property Name="ChannelConfigOverride" Type="int64" Value="521"/>
-							</PropertyList>
-							<Language>SFX</Language>
-							<AudioFile>Freud_2-F1-7_PREMIX_Unity.wav</AudioFile>
+							<AudioFile>Freud_TEST_Ambisonic2ndOrder.wav</AudioFile>
 						</AudioFileSource>
 					</ChildrenList>
 					<PositioningInfo>
-						<Panner Name="" ID="{B89F6E00-14A3-415B-A391-CC501747B9FD}"/>
-						<Position Name="" ID="{E31FCED1-F9E6-436D-AC3B-F3B7BD34568A}"/>
+						<Panner Name="" ID="{65DDF272-98F5-4EBE-8238-577858E8838E}"/>
+						<Position Name="" ID="{F18DE51E-3EF4-4323-A8A3-3053BE51F639}"/>
 					</PositioningInfo>
 					<ActiveSourceList>
-						<ActiveSource Name="Freud_2-F1-7_PREMIX_Unity" ID="{9963D92C-0342-4486-A83C-903FCA302EBB}" Platform="Linked"/>
+						<ActiveSource Name="Freud_TEST_Ambisonic2ndOrder" ID="{14D0F2C4-1480-47EB-96B0-DA824E1A40F1}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Freud_TEST_Headlocked" ID="{6DB58FB9-5D88-430B-BAFC-F6308FB71B1B}" ShortID="85791053">
+					<PropertyList>
+						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BDB338AD-5F17-4284-ABCA-FA5C700A3477}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{915B61B1-18DF-4962-AED9-7E215C7469A8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Freud_TEST_Headlocked" ID="{F04F8790-B625-46DD-BA99-CB8A0E905966}" ShortID="385201427">
+							<Language>SFX</Language>
+							<AudioFile>Freud_TEST_Headlocked.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Freud_TEST_Headlocked" ID="{F04F8790-B625-46DD-BA99-CB8A0E905966}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>
