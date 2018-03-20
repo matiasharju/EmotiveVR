@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ValidationCache Version="1" SchemaVersion="85">
-	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1519378914" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\Actor-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1521495739" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\Attenuations\Default Work Unit.wwu" DateLow="1519306998" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\Audio Devices\Default Work Unit.wwu" DateLow="1519221620" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\Control Surface Sessions\Default Work Unit.wwu" DateLow="1519221620" DateHigh="0"/>
@@ -9,18 +9,18 @@
 	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\Dynamic Dialogue\Default Work Unit.wwu" DateLow="1519221620" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\Effects\Default Work Unit.wwu" DateLow="1519221620" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\Effects\Factory Effects.wwu" DateLow="1519899883" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\EmotiveVR_WWise.crossover.wsettings" DateLow="1521487498" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\EmotiveVR_WWise.wproj" DateLow="1519221620" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\Events\Default Work Unit.wwu" DateLow="1519923641" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\EmotiveVR_WWise.crossover.wsettings" DateLow="1521496764" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\EmotiveVR_WWise.wproj" DateLow="1521488833" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\Events\Default Work Unit.wwu" DateLow="1521495739" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\Game Parameters\Default Work Unit.wwu" DateLow="1519831948" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1519923641" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\Interactive Music Hierarchy\Default Work Unit.wwu" DateLow="1521495739" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\Master-Mixer Hierarchy\Default Work Unit.wwu" DateLow="1519899883" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\Mixing Sessions\Default Work Unit.wwu" DateLow="1519221620" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\Modulators\Default Work Unit.wwu" DateLow="1519221620" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\Presets\Default Work Unit.wwu" DateLow="1519221620" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\Queries\Default Work Unit.wwu" DateLow="1519221620" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\Queries\Factory Queries.wwu" DateLow="1519221620" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\SoundBanks\Default Work Unit.wwu" DateLow="1519224251" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\SoundBanks\Default Work Unit.wwu" DateLow="1521496750" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\Soundcaster Sessions\Default Work Unit.wwu" DateLow="1519221620" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\States\Default Work Unit.wwu" DateLow="1519221620" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Dropbox\Aalto\EmotiveVR\EmotiveVR_Unity\EmotiveVR_WWise\Switches\Default Work Unit.wwu" DateLow="1519221620" DateHigh="0"/>

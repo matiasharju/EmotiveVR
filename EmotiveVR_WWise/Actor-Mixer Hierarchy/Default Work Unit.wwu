@@ -97,7 +97,58 @@
 							<ObjectRef Name="Ambisonics" ID="{2FD27E7A-6647-4DB9-ABEA-1CD66C15548A}" WorkUnitID="{8E9E56B3-F294-47C6-B55E-46DD6F0D599B}"/>
 						</Reference>
 						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{BDB338AD-5F17-4284-ABCA-FA5C700A3477}"/>
+							<Custom>
+								<Conversion Name="Conversion Settings (Custom)" ID="{95DCCE54-D939-453F-90CD-D8F05B9BE8BC}">
+									<PropertyList>
+										<Property Name="Channels" Type="int32">
+											<ValueList>
+												<Value Platform="Windows">4</Value>
+												<Value Platform="Mac">4</Value>
+												<Value Platform="Android">4</Value>
+											</ValueList>
+										</Property>
+										<Property Name="LRMix" Type="Real64">
+											<ValueList>
+												<Value Platform="Windows">0</Value>
+												<Value Platform="Mac">0</Value>
+												<Value Platform="Android">0</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MaxSampleRate" Type="int32">
+											<ValueList>
+												<Value Platform="Windows">0</Value>
+												<Value Platform="Mac">0</Value>
+												<Value Platform="Android">0</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MinSampleRate" Type="int32">
+											<ValueList>
+												<Value Platform="Windows">0</Value>
+												<Value Platform="Mac">0</Value>
+												<Value Platform="Android">0</Value>
+											</ValueList>
+										</Property>
+										<Property Name="SampleRate" Type="int32">
+											<ValueList>
+												<Value Platform="Windows">0</Value>
+												<Value Platform="Mac">0</Value>
+												<Value Platform="Android">0</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ConversionPluginInfoList>
+										<ConversionPluginInfo Platform="Windows">
+											<ConversionPlugin Name="" ID="{195B05D6-337A-4D13-9F46-17D1D8E9E017}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+										</ConversionPluginInfo>
+										<ConversionPluginInfo Platform="Mac">
+											<ConversionPlugin Name="" ID="{5E5DECF5-8680-42A2-9651-439759DC2F42}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+										</ConversionPluginInfo>
+										<ConversionPluginInfo Platform="Android">
+											<ConversionPlugin Name="" ID="{4BAAF169-0F98-4B65-BB33-2E15B7BC2E1A}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+										</ConversionPluginInfo>
+									</ConversionPluginInfoList>
+								</Conversion>
+							</Custom>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Ambisonic 2-2 Bus" ID="{63F2C6EF-50DA-4554-940D-A9A4ED2737AA}" WorkUnitID="{915B61B1-18DF-4962-AED9-7E215C7469A8}"/>
