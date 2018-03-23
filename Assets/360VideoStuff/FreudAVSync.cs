@@ -26,7 +26,7 @@ VideoPlayer videoPlayer;
 
 	void Update () 
 	{	
-		if (videoPlayer.time >= (FreudAudioStarts - 0.005) && videoPlayer.time < (FreudAudioStarts + 0.02) && freudTriggered == false)
+		if (videoPlayer.time >= (FreudAudioStarts + 0.00) && videoPlayer.time < (FreudAudioStarts + 0.02) && freudTriggered == false)
 		{
 			AkSoundEngine.PostEvent("PlayFreudAudio", staticAudioSource.gameObject);
 			Debug.Log("<color=green>Start Freud Audio at 00:00</color>" + " " + videoPlayer.time);

@@ -101,6 +101,21 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{50B13EAD-E310-40C6-9B76-CF6D65F46630}" ShortID="508432694">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Front-Left-Right-Rear_AmbiX2ndOrder" ID="{95DC1AA3-DD4B-4F5F-8ABE-C19D53C7F250}" WorkUnitID="{7011B163-7DEB-4017-B5E0-DAF3F1916B50}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 			</ChildrenList>

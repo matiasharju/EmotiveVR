@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 351af47f81fcf4eb9a6f6098ad628892
-timeCreated: 1521488806
+timeCreated: 1521651998
 licenseType: Free
 PluginImporter:
   externalObjects: {}
@@ -56,19 +56,19 @@ PluginImporter:
   - first:
       Standalone: OSXIntel
     second:
-      enabled: 0
+      enabled: 1
       settings:
         CPU: AnyCPU
   - first:
       Standalone: OSXIntel64
     second:
-      enabled: 0
+      enabled: 1
       settings:
         CPU: AnyCPU
   - first:
       Standalone: OSXUniversal
     second:
-      enabled: 0
+      enabled: 1
       settings:
         CPU: AnyCPU
   - first:

@@ -78,7 +78,6 @@
 				</Sound>
 				<Sound Name="Freud_TEST_Ambisonic" ID="{9E247B34-5C60-49FF-B17E-72229ED5FDAF}" ShortID="639397554">
 					<PropertyList>
-						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
 						<Property Name="MaxSoundPerInstance" Type="int16">
 							<ValueList>
@@ -155,9 +154,13 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="Freud_TEST_Ambisonic2ndOrder" ID="{14D0F2C4-1480-47EB-96B0-DA824E1A40F1}" ShortID="693545233">
+						<AudioFileSource Name="Freud_mix18-03-21_AmbiX2-2" ID="{05486636-70E3-47EC-AF91-AF37483F8FAD}" ShortID="437247575">
+							<PropertyList>
+								<Property Name="ChannelConfigOverride" Type="int64" Value="521"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
 							<Language>SFX</Language>
-							<AudioFile>Freud_TEST_Ambisonic2ndOrder.wav</AudioFile>
+							<AudioFile>Freud_mix18-03-21_AmbiX2-2.wav</AudioFile>
 						</AudioFileSource>
 					</ChildrenList>
 					<PositioningInfo>
@@ -165,7 +168,7 @@
 						<Position Name="" ID="{F18DE51E-3EF4-4323-A8A3-3053BE51F639}"/>
 					</PositioningInfo>
 					<ActiveSourceList>
-						<ActiveSource Name="Freud_TEST_Ambisonic2ndOrder" ID="{14D0F2C4-1480-47EB-96B0-DA824E1A40F1}" Platform="Linked"/>
+						<ActiveSource Name="Freud_mix18-03-21_AmbiX2-2" ID="{05486636-70E3-47EC-AF91-AF37483F8FAD}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Freud_TEST_Headlocked" ID="{6DB58FB9-5D88-430B-BAFC-F6308FB71B1B}" ShortID="85791053">
@@ -191,13 +194,112 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<AudioFileSource Name="Freud_TEST_Headlocked" ID="{F04F8790-B625-46DD-BA99-CB8A0E905966}" ShortID="385201427">
+						<AudioFileSource Name="Freud_mix18-03-21_Headlocked" ID="{64694B04-4BCE-47FA-8444-ABB009676C57}" ShortID="341129274">
+							<PropertyList>
+								<Property Name="ChannelConfigOverride" Type="int64" Value="12546"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
 							<Language>SFX</Language>
-							<AudioFile>Freud_TEST_Headlocked.wav</AudioFile>
+							<AudioFile>Freud_mix18-03-21_Headlocked.wav</AudioFile>
 						</AudioFileSource>
 					</ChildrenList>
 					<ActiveSourceList>
-						<ActiveSource Name="Freud_TEST_Headlocked" ID="{F04F8790-B625-46DD-BA99-CB8A0E905966}" Platform="Linked"/>
+						<ActiveSource Name="Freud_mix18-03-21_Headlocked" ID="{64694B04-4BCE-47FA-8444-ABB009676C57}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Front-Left-Right-Rear_AmbiX2ndOrder" ID="{95DC1AA3-DD4B-4F5F-8ABE-C19D53C7F250}" ShortID="440241799">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="MaxReachedBehavior" Type="int16" Value="1"/>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+						<Property Name="PositioningType" Type="int16" Value="1"/>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Ambisonics" ID="{2FD27E7A-6647-4DB9-ABEA-1CD66C15548A}" WorkUnitID="{8E9E56B3-F294-47C6-B55E-46DD6F0D599B}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<Custom>
+								<Conversion Name="Conversion Settings (Custom)" ID="{34234229-E5C0-4C4A-B82E-E3AC5DD545C9}">
+									<PropertyList>
+										<Property Name="Channels" Type="int32">
+											<ValueList>
+												<Value Platform="Windows">4</Value>
+												<Value Platform="Mac">4</Value>
+												<Value Platform="Android">4</Value>
+											</ValueList>
+										</Property>
+										<Property Name="LRMix" Type="Real64">
+											<ValueList>
+												<Value Platform="Windows">0</Value>
+												<Value Platform="Mac">0</Value>
+												<Value Platform="Android">0</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MaxSampleRate" Type="int32">
+											<ValueList>
+												<Value Platform="Windows">0</Value>
+												<Value Platform="Mac">0</Value>
+												<Value Platform="Android">0</Value>
+											</ValueList>
+										</Property>
+										<Property Name="MinSampleRate" Type="int32">
+											<ValueList>
+												<Value Platform="Windows">0</Value>
+												<Value Platform="Mac">0</Value>
+												<Value Platform="Android">0</Value>
+											</ValueList>
+										</Property>
+										<Property Name="SampleRate" Type="int32">
+											<ValueList>
+												<Value Platform="Windows">0</Value>
+												<Value Platform="Mac">0</Value>
+												<Value Platform="Android">0</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ConversionPluginInfoList>
+										<ConversionPluginInfo Platform="Windows">
+											<ConversionPlugin Name="" ID="{E57ABE3A-4665-4783-B6DA-4A8B6519B72C}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+										</ConversionPluginInfo>
+										<ConversionPluginInfo Platform="Mac">
+											<ConversionPlugin Name="" ID="{916C436E-AFBD-43D7-A136-1859D47737E0}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+										</ConversionPluginInfo>
+										<ConversionPluginInfo Platform="Android">
+											<ConversionPlugin Name="" ID="{378B6783-3784-419D-94CB-26B4CF1E92C8}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+										</ConversionPluginInfo>
+									</ConversionPluginInfoList>
+								</Conversion>
+							</Custom>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Ambisonic 2-2 Bus" ID="{63F2C6EF-50DA-4554-940D-A9A4ED2737AA}" WorkUnitID="{915B61B1-18DF-4962-AED9-7E215C7469A8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Front-Left-Right-Rear_AmbiX2ndOrder" ID="{006D1FCB-0359-40E9-ADB0-1D1F258EA8B4}" ShortID="446239196">
+							<PropertyList>
+								<Property Name="ChannelConfigOverride" Type="int64" Value="521"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>Front-Left-Right-Rear_AmbiX2ndOrder.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<PositioningInfo>
+						<Panner Name="" ID="{28069AB5-E178-4D37-82B2-CF033FEDF33C}"/>
+						<Position Name="" ID="{5B6784B1-7BF8-4E88-B67D-FEF4752A7C3E}"/>
+					</PositioningInfo>
+					<ActiveSourceList>
+						<ActiveSource Name="Front-Left-Right-Rear_AmbiX2ndOrder" ID="{006D1FCB-0359-40E9-ADB0-1D1F258EA8B4}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

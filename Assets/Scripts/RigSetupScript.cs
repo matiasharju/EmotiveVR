@@ -14,7 +14,7 @@ public class RigSetupScript : MonoBehaviour
     ShaderManager shaderManager;
 
     void Start() {
-        shaderManager = GameObject.Find("ShaderPlane").GetComponent<ShaderManager>();
+//        shaderManager = GameObject.Find("ShaderPlane").GetComponent<ShaderManager>();
     }
 
     void Update()
@@ -52,7 +52,7 @@ public class RigSetupScript : MonoBehaviour
     void SetupSimulator()
     {
         Debug.Log("Using simulator");
-        GameObject.Find("ShaderPlane").GetComponent<PlanePositionScript>().UpdateTarget(GameObject.Find("Neck/Camera").transform, true);
+//        GameObject.Find("ShaderPlane").GetComponent<PlanePositionScript>().UpdateTarget(GameObject.Find("Neck/Camera").transform, true);
         GetComponent<SimpleMove>().rig = GameObject.Find("VRSimulatorCameraRig").transform;
         Debug.Log("Initialized successfully");
         init = true;
@@ -62,7 +62,7 @@ public class RigSetupScript : MonoBehaviour
     void SetupOpenVR()
     {
         Debug.Log("Using SteamVR");
-        GameObject.Find("ShaderPlane").GetComponent<PlanePositionScript>().UpdateTarget(GameObject.Find("Camera (eye)").transform, false);
+//        GameObject.Find("ShaderPlane").GetComponent<PlanePositionScript>().UpdateTarget(GameObject.Find("Camera (eye)").transform, false);
         Debug.Log("Initialized successfully");
         init = true;
         isSimulator = false;
